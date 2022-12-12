@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
-    <link rel="stylesheet" href="result.css">
+    <link rel="stylesheet" href="/styles/result.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
    
@@ -19,11 +21,23 @@
         <div class="correct-wrong">
             <h2 id = "percentage-correct">Correct</h2>
             <h2 id = "percentage-wrong">Wrong</h2>
+
+            <div class="progress">
+                <div class="outer">
+                    <div class="inner">
+                        <div id="number">65%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="circle"></div>
+
+
         </div>
         
         <button onclick="rateUs();">Rate Us</button>
     </container>
-    <script src="script.js">
+    <script src="result.js">
     </script>
 </body>
 </html>
