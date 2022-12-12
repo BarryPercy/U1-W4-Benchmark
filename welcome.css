@@ -1,0 +1,109 @@
+body{
+    background-color:darkgray
+}
+#container{
+    background-color: white;
+    max-width:850px;
+    height:700px;
+    margin:auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    background-image: url(./bg.jpg);
+    position: relative;
+}
+#logo{
+    width:150px;
+    height:50px;
+    display: inline-block;
+    position:absolute;
+    object-fit: contain;
+    left: 80px;
+    top: 20px;
+   
+    
+    
+}
+
+.title-font{
+    font-family: 'Outfit', sans-serif;
+}
+.other-font{
+    font-family: 'Inter', sans-serif;
+    font-size: .9rem;
+}
+#welcome-page-title{
+    color: white;
+   
+    font-size: 2rem;
+    position:absolute;
+    left: 80px;
+    top:65px;
+    font-weight: lighter;
+    line-height: 60px;
+    
+
+}
+
+#your-exam{
+    display: block;
+    font-weight: bolder;
+    
+}
+
+.pink{
+        color:#D20094;
+      
+    }
+
+#instructions{
+    position:absolute;
+    left:80px;
+    top:250px;
+}
+.white{
+    color: white;
+}
+.welcome-page-list{
+    margin: 10px;
+}
+
+#promise{
+position:absolute;
+bottom:130px;
+left:80px;
+}
+
+
+
+
+#proceed-button{
+    position: absolute;
+    bottom:130px;
+    right:80px;
+}
+
+#proceed-button button{
+
+    width:200px;
+    height:55px;
+    padding: 10px;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    font-size: 1.2em;
+    background-color: #00ffff;
+    font-weight: bold;
+    -webkit-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    
+    
+}
+
+#proceed-button button:hover{
+    -webkit-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+
+    
+}
