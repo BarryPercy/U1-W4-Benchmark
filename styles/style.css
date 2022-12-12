@@ -18,10 +18,9 @@ img, picture, svg, video{
     background-image: url('../assets/bg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    width:70%;
-    padding-top: 30%;
-    margin-top:20vh;
-    margin-left:60vh;
+    width:1024px;
+    height:768px;
+    margin-top:100px;
 }
 
 .blue{
@@ -34,9 +33,16 @@ img, picture, svg, video{
 .other-pink{
     background-color:#900080;
 }
+
 .epicode-logo{
-    position: relative;;
-    width:10%;
-    top: -540px;
-    left:100px;
+    max-width:150px;
+    height:auto;
+    display: inline-block;
+    position: relative;
+    object-fit: contain;
+    margin-left: 80px;
+    margin-top: 20px;
+    top:30px;
+    right:400px;
+
 }
