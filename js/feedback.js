@@ -1,10 +1,4 @@
 let stars = document.getElementsByClassName('star');
-<<<<<<< Updated upstream
-for(let i=0;i<stars.length;i++){
-    stars[i].addEventListener('click', function(){
-        stars[i].classList.toggle('star-black-filter')
-    })
-=======
 let starRating = false;
 let feedbackGiven = false;
 let starContainer = document.querySelector('.stars');
@@ -96,5 +90,4 @@ function createTeacherRating(){
     starContainer.classList.add('stars');
     content.appendChild(starContainer);
     createStars();
->>>>>>> Stashed changes
 }
