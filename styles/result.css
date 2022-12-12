@@ -6,7 +6,7 @@ body{
     display:block;
     margin:auto;
     text-align: center;
-    background-image: url('./assets/bg.jpg');
+    background-image: url('../assets/bg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     width:1024px;
