@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    font:inherit;
+}
+body{
+    background-color: grey;
+}
+
+img, picture, svg, video{
+    display:block;
+    max-width:100%;
+}
+.benchmark-container{
+    display:block;
+    margin:auto;
+    text-align: center;
+    background-image: url('../assets/bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:70%;
+    padding-top: 30%;
+    margin-top:20vh;
+    margin-left:60vh;
+}
+
+.blue{
+    background-color: #00FFFF;
+}
+
+.pink{
+    background-color:#D20094;
+}
+.other-pink{
+    background-color:#900080;
+}
+.epicode-logo{
+    position: relative;;
+    width:10%;
+    top: -540px;
+    left:100px;
+}
