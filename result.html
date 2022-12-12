@@ -6,37 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
     <link rel="stylesheet" href="/styles/result.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200&display=swap" rel="stylesheet">
-</head>
+  </head>
 <body>
-   
-
+    <img class="epicode-logo" src="./assets/epicode_logo.png" alt="Logo">
     <container class="result-container"> 
-        <img class = "epicode-logo" src="./assets/epicode_logo.png" alt="Logo">
-
-        <h1 class = "result-title">Results</h1>
-        <p class = "summary">The summary of your answers:</p>
-
+        <h1 class="results-title">Results</h1>
+        <p class="summary">The summary of your answers:</p>
         <div class="correct-wrong">
-            <h2 id = "percentage-correct">Correct</h2>
-            <h2 id = "percentage-wrong">Wrong</h2>
-
-            <div class="progress">
-                <div class="outer">
-                    <div class="inner">
-                        <div id="number">65%</div>
-                    </div>
-                </div>
+            <h2 class="percentage"></span></h2>
+            <div class="pies">
+                <div class="pie pie1" style="--p:70;--b:5vh;--c:#900080">70%</div>
+                <div class="pie pie2" style="--p:30;--b:5vh;--c:#00FFFF;"></div>
             </div>
-
-            <div class="circle"></div>
-
-
+            <!--<div class="circle"></div>-->
         </div>
-        
-        <button onclick="rateUs();">Rate Us</button>
-    </container>
+        <button class="rate-us-button" onclick="rateUs();">Rate Us</button>
     <script src="result.js">
     </script>
 </body>
