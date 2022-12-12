@@ -13,27 +13,33 @@
    
 
     <container class="result-container"> 
+        <div>
         <img class = "epicode-logo" src="./assets/epicode_logo.png" alt="Logo">
 
         <h1 class = "result-title">Results</h1>
         <p class = "summary">The summary of your answers:</p>
+        </div>
 
-        <div class="correct-wrong">
-            <h2 id = "percentage-correct">Correct</h2>
-            <h2 id = "percentage-wrong">Wrong</h2>
-
-            <div class="progress">
-                <div class="outer">
-                    <div class="inner">
-                        <div id="number">65%</div>
-                    </div>
-                </div>
+        <div class="result-body">
+            <div class="correct">
+            <h2 id = "correct-statement">Correct</h2><br>
+                <h2 id = "correct-percentage">45%</h2>
+                <p id = "correct-questions">13/27 questions</p>
+        </div>
+            <div class="wrong">
+            <h2 id = "wrong-statement">Wrong</h2>
+            <h2 id = "wrong-percentage">55%</h2>
+            <p id = "wrong-questions">14/27 questions</p>
             </div>
 
-            <div class="circle"></div>
+            <div class="container">
 
-
+            <div class="circular-progress">
+                <span class="progress-value">55%</span>
+           </div>
         </div>
+    </div>
+        
         
         <button onclick="rateUs();">Rate Us</button>
     </container>

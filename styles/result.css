@@ -7,6 +7,7 @@
 
 body{
     background-color: grey;
+    display: flex;
 }
 
 .result-container{
@@ -46,7 +47,7 @@ body{
     margin-top: -20px;
 }
 
-#percentage-correct{
+#correct-statement{
     color: white;
     font-weight: lighter;
     font-size: 60px;
@@ -55,13 +56,86 @@ body{
     padding-left: 80px;
 }
 
-#percentage-wrong{
+#correct-percentage{
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    text-align:left;
+    margin-top: -30px;
+    padding-left: 80px;
+}
+
+#correct-questions{
+    color: white;
+    font-size: 30px;
+    text-align:left;
+    margin-top: -10px;
+    padding-left: 80px;
+}
+
+#wrong-statement{
     color: white;
     font-weight: lighter;
     font-size: 60px;
     text-align:right;
-    margin-top: -70px;
-    padding-right: 80px;
+    margin-top: -170px;
+    padding-right: 50px;
+}
+
+#wrong-percentage{
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    text-align:right;
+    margin-top: -10px;
+    padding-right: 40px;
+}
+
+#wrong-questions{
+    color: white;
+    font-size: 30px;
+    text-align:right;
+    margin-top: -10px;
+    padding-right: 50px;
+}
+
+.container{
+    display: flex;
+    width: 420px;
+    height: 500px;
+    margin-top: -250px;
+    padding-left: 60px;
+    margin-left: 250px;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circular-progress{
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    background:conic-gradient( #900080 200deg, #00FFFF 0deg );
+    align-items: center;
+    justify-content: center;
+}
+
+.circular-progress::before{
+    content:"";
+    position: absolute;
+    height: 360px;
+    width: 360px;
+    border-radius: 50%;
+    background: url('../assets/bg.jpg');
+    background-position: center;
+}
+ 
+.progress-value{
+    font-size: 40px;
+    color: white;
+    position: relative;
 }
 
 button{
@@ -71,47 +145,7 @@ button{
     color: white;
     border-color: white;
     background-color: transparent;
-    margin-top: 230px;
+    margin-top: -30px;
     cursor: pointer;
 }
 
-.progress{
-    width: 200px;
-    height: 200px;
-    position:relative;
-}
-
-.outer{
-    text-align: center;
-    height: 350px;
-    width: 350px;
-    margin-left: 320px;
-    margin-top: -150px;
-    border-radius: 50%;
-    box-shadow: 6px 6px 10px -3px black,
-                -6px -6px 10px -3px black;
-    padding: 35px;
-}
-
-.inner{
-    height: 280px;
-    width: 280px;
-    padding: 35px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 4px 4px 6px -1px black,
-                 inset -4px -4px 6px -1px black;
-}
-
-#number{
-    font-weight: 600px;
-    font-size: 40px;
-    color: white;
-}
-
-.circle{
-    border-radius: 50%;
-    color: #00FFFF;
-}
