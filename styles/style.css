@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
 *{
     margin:0;
     padding:0;
@@ -5,6 +7,7 @@
 }
 body{
     background-color: grey;
+    font-family: 'Inter', sans-serif;
 }
 
 img, picture, svg, video{
@@ -21,6 +24,18 @@ img, picture, svg, video{
     width:1024px;
     height:768px;
     margin-top:100px;
+    font-size:24px;
+    color: white;
+    line-height: 150%;
+}
+.content{
+    margin-left:17%;
+    margin-right:17%;
+}
+h1{
+    font-family: 'Outfit', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 .blue{
@@ -33,16 +48,49 @@ img, picture, svg, video{
 .other-pink{
     background-color:#900080;
 }
-
+hr{
+    margin-left:16%;
+    margin-right:16%;
+    height:2px;
+    border:none;
+}
 .epicode-logo{
-    max-width:150px;
+    max-width:160px;
     height:auto;
     display: inline-block;
     position: relative;
     object-fit: contain;
     margin-left: 80px;
     margin-top: 20px;
-    top:30px;
-    right:400px;
-
+    top:20px;
+    right:375px;
 }
+.star{
+    display:inline-block;
+    margin-right:7px;
+}
+input{
+    display: relative;
+    margin-top: 30px;
+    background:none;
+    border:none;
+    text-align: left !Important;
+    color:grey;
+    font-size: 16px;
+    outline:0;
+    width:640px;
+}
+
+.more-info-button{
+    -webkit-box-shadow: 0px 3px 47px 5px rgba(22,160,133,1);
+    -moz-box-shadow: 0px 3px 47px 5px rgba(22,160,133,1);
+    box-shadow: 0px 3px 47px 5px rgba(22,160,133,1);
+    border:none;
+    margin-top: 50px;
+    width: 220px;
+    height:63px;
+    font-weight: bold;
+    font-family: 'Outfit', sans-serif;
+    color: #0d0a34;
+}
+
