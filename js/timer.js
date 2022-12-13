@@ -32,7 +32,7 @@ document.getElementById("timer").innerHTML = `
   </span>
 </div>
 `;
-const TIME_LIMIT = 5;
+const TIME_LIMIT = 20;
 document.querySelector('.timer-value').innerText = TIME_LIMIT;
 
 let timePassed = 0;
@@ -55,13 +55,13 @@ function startTimer() {
 }
 
 function calculateTimeFraction() {
-  return timeLeft / TIME_LIMIT;
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
 }
     
-// Update the dasharray value as time passes, starting with 283
 function setCircleDasharray() {
   const circleDasharray = `${(
-    calculateTimeFraction() * FULL_DASH_ARRAY
+    calculateTimeFraction() * 283
   ).toFixed(0)} 283`;
   document
     .getElementById("base-timer-path-remaining")

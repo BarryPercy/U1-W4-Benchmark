@@ -23,13 +23,13 @@ body{
     width: 13vh;
 }
   
-  /* Removes SVG styling that would hide the time label */
+
 .base-timer__circle {
     fill: none;
     stroke: none;
 }
   
-/* The SVG path that displays the timer's progress */
+
 .base-timer__path-elapsed {
     stroke-width: 1vh;
     stroke: grey;
@@ -54,9 +54,11 @@ body{
     transform-origin: center;
     transition: 1s linear all;
     stroke: #00FFFF;
-  }
+}
   
-  .base-timer__svg {
-    /* Flips the svg and makes the animation to move left-to-right */
-    transform: scaleX(-1);
-  }
+#timer{
+    position:relative;
+    float:right;
+    top:2vh;
+    right:5vh;
+}
