@@ -33,15 +33,18 @@ body{
 
 .results-title{
     font-family: 'Outfit', sans-serif;
-    font-size: 5vh;
+    font-size: 10vh;
     font-weight: bold;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
 
 .summary{
     color: white;
     text-align: center;
+    font-size: 4vh;
+    word-spacing: 7px;
 }
+
 h2 {
   display: flex;
 }
@@ -54,20 +57,21 @@ h2:after {
 }
 .percentage{
     color: white;
-    font-size: 10vh;
+    font-size: 8vh;
     margin-top: 9vh;
 }
 
 #rateUs{
     position: relative;
     width: 30vh;
-    height: 10vh;
+    height: 8vh;
     font-size: 6vh;
     color: white;
     border-color: white;
+    border-width: 5px;
     background-color: transparent;
     cursor: pointer;
-    bottom:20vh;
+    bottom: 44vh;
 }
 
 /*.progress{
@@ -117,7 +121,7 @@ h2:after {
 }
 
 .pie{
-    --w:35vh;
+    --w:45vh;
     width: var(--w);
     aspect-ratio: 1;
     position: relative;
@@ -145,12 +149,12 @@ h2:after {
     transform: scale(-1, 1);
 }
 .pie1{
-    left:17.9vh;
-    bottom:32vh;
+    left:23.9vh;
+    bottom:47vh;
 }
 .pie2{
-    right:17.67vh;
-    bottom:15.6vh;
+    right:21.67vh;
+    bottom:23.6vh;
 }
 .pies{
     translate:translateY(100vh);
@@ -167,18 +171,30 @@ h2:after {
 }
 
 
-#correct-results:before{
-    content: "hi";
+.percentage-results:before{
+    content: "30%";
     
 }
 
-#correct-results:after{
-   content: "yo";
+.percentage-results:after{
+   content: "70%";
     
 }
 
-#correct-results:before,
-#correct-results:after {
-  content: "";
-  flex: 1;
+.percentage-results{
+    font-size: 90px;
+}
+
+.question-results:before{
+    content: "3/10 questions";
+    
+}
+
+.question-results:after{
+   content: "7/10 questions";
+    
+}
+
+.question-results{
+    font-size: 30px;
 }
