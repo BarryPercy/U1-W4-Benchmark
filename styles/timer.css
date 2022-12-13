@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    font:inherit;
+}
+html{
+    height:100%;
+    max-height:90vh;
+}
+img, picture, svg, video{
+    display:block;
+    max-width:100%;
+}
+body{
+    background-color: grey;
+    font-family: 'Inter', sans-serif;
+    background-image: url('../assets/bg.jpg');
+    background-size: cover;
+}
+.base-timer {
+    position: relative;
+    height: 13vh;
+    width: 13vh;
+}
+  
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+  
+
+.base-timer__path-elapsed {
+    stroke-width: 1vh;
+    stroke: grey;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 13vh;
+    height: 13vh;
+    color:white;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 1vh;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: #00FFFF;
+}
+  
+#timer{
+    position:relative;
+    float:right;
+    top:2vh;
+    right:5vh;
+}
