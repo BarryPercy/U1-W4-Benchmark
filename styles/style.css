@@ -1,43 +1,44 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
 *{
     margin:0;
     padding:0;
     font:inherit;
 }
-body{
-    background-color: grey;
-    font-family: 'Inter', sans-serif;
+html{
+    height:100%;
+    max-height:90vh;
 }
-
 img, picture, svg, video{
     display:block;
     max-width:100%;
 }
-.benchmark-container{
-    display:block;
-    margin:auto;
-    text-align: center;
+body{
+    background-color: grey;
+    font-family: 'Inter', sans-serif;
     background-image: url('../assets/bg.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width:1024px;
-    height:768px;
-    margin-top:100px;
-    font-size:24px;
+    background-size: cover;
+}
+.benchmark-container{
+    text-align: center;
+    font-size:3vh;
     color: white;
-    line-height: 150%;
 }
 .content{
-    margin-left:17%;
-    margin-right:17%;
+    margin-left:25vh;
+    margin-right:25vh;
+    font-size: 3vh;
 }
 h1{
     font-family: 'Outfit', sans-serif;
-    font-size: 50px;
+    font-size: 5vh;
     font-weight: bold;
 }
-
+.h1-titles{
+    margin-top: 11vh;
+}
+.rating-text{
+    margin-top: 4vh;
+}
 .blue{
     background-color: #00FFFF;
 }
@@ -48,52 +49,77 @@ h1{
 .other-pink{
     background-color:#900080;
 }
+.other-pink-text{
+    color: #900080;
+    font-weight: bold;
+}
 hr{
-    margin-left:16%;
-    margin-right:16%;
+    margin-top:1vh;
+    margin-left:35vh;
+    margin-right:35vh;
     height:2px;
     border:none;
 }
 .epicode-logo{
-    max-width:160px;
+    max-width:20vh;
     height:auto;
     display: inline-block;
     position: relative;
     object-fit: contain;
-    margin-left: 80px;
-    margin-top: 20px;
-    top:20px;
-    right:375px;
+    top:8vh;
+    left:15vh;
+}
+.stars{
+    margin-top:4vh;
 }
 .star{
+    width:7vh;
     display:inline-block;
-    margin-right:7px;
+    margin-right:1vh;
+    filter:drop-shadow(0px 0px 4px #00FFFF);
 }
 .star-black-filter{
     filter: brightness(0%);
 }
 input{
     display: relative;
-    margin-top: 30px;
     background:none;
+    margin-top: 8vh;
     border:none;
-    text-align: left !Important;
     color:grey;
-    font-size: 16px;
+    font-size: 2.5vh;
     outline:0;
-    width:640px;
+    width:90vh;
 }
-
-.more-info-button{
-    -webkit-box-shadow: 0px 3px 47px 5px rgba(22,160,133,1);
-    -moz-box-shadow: 0px 3px 47px 5px rgba(22,160,133,1);
-    box-shadow: 0px 3px 47px 5px rgba(22,160,133,1);
+.open-feedback-paragraph{
+    margin-top: 8vh;
+}
+.proceed-button{
+    -webkit-box-shadow: 0px 3px 47px 8px #00FFFF;
+    -moz-box-shadow: 0px 3px 47px 8px #00FFFF;
+    box-shadow: 0px 3px 47px 8px #00FFFF;
     border:none;
-    margin-top: 50px;
-    width: 220px;
-    height:63px;
+    margin-top: 5vh;
+    width: 20vh;
+    height: 10vh;
+    border-radius:1vh;
     font-weight: bold;
     font-family: 'Outfit', sans-serif;
     color: #0d0a34;
 }
 
+.proceed-button:hover{
+    -webkit-box-shadow: 0px 3px 47px 12px #00FFFF;
+    -moz-box-shadow: 0px 3px 47px 12px #00FFFF;
+    box-shadow: 0px 3px 47px 12px #00FFFF;
+}
+.low-opacity{
+    opacity:20%;
+}
+.hidden{
+    display:none;
+}
+
+.star-hover{
+    filter:drop-shadow(0px 0px 5px #00FFFF);
+}
