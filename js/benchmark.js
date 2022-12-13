@@ -100,19 +100,20 @@ const questions = [
 
 
   let totalScore=0;
-  let currentIndex=0;
+  let currentIndex=-1;
 function displayQuestion(){   
         let question = document.getElementById("question");
-        
+        currentIndex++;
             let currentQuestion = questions[currentIndex];
             question.innerHTML=currentQuestion.question;
-            let nextButtonNode=document.getElementById('next-btn');
+            /*let nextButtonNode=document.getElementById('next-btn');
              nextButtonNode.addEventListener("click",function(){
                             currentIndex=currentIndex+1;
-                             displayQuestion()
+                             displayQuestion();
                              return;
                              
-                 })
+                 })*/
+                 
             }
 
 
