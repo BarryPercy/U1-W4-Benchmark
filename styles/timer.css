@@ -19,8 +19,8 @@ body{
 }
 .base-timer {
     position: relative;
-    height: 10vh;
-    width: 10vh;
+    height: 13vh;
+    width: 13vh;
 }
   
   /* Removes SVG styling that would hide the time label */
@@ -31,14 +31,14 @@ body{
   
 /* The SVG path that displays the timer's progress */
 .base-timer__path-elapsed {
-    stroke-width: 7px;
+    stroke-width: 1vh;
     stroke: grey;
 }
 
 .base-timer__label {
     position: absolute;
-    width: 10vh;
-    height: 10vh;
+    width: 13vh;
+    height: 13vh;
     color:white;
     top: 0;
     display: flex;
@@ -46,3 +46,17 @@ body{
     justify-content: center;
     font-size: 5vh;
 }
+
+.base-timer__path-remaining {
+    stroke-width: 1vh;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    stroke: #00FFFF;
+  }
+  
+  .base-timer__svg {
+    /* Flips the svg and makes the animation to move left-to-right */
+    transform: scaleX(-1);
+  }
