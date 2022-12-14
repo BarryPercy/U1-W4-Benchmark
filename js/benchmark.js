@@ -110,20 +110,47 @@ const questions = [
 
 
 
- function changebgOfSelectedOption(index){
-   
-    let options=document.getElementById('answer-btns').childNodes
-    console.log(options)
-    for(let i=0;i<options.length;i++){
-        if(i===index){
-            options[i].classList.add('selectedAnswer')
-        }
-       else{
-        options[i].classList.remove('selectedAnswer')
-       }
-        }
-}
 
+function changeBackgroundOfSelectedAnswer(){
+    answerone = document.querySelectorAll(".answer-btn")[0];
+    answertwo = document.querySelectorAll(".answer-btn")[1];
+    answerthree = document.querySelectorAll(".answer-btn")[2];
+    answerfour = document.querySelectorAll(".answer-btn")[3];
+    answerone.addEventListener("click", function() {
+      this.style.backgroundColor = "#900080";
+      answertwo.style.backgroundColor = "darkslateblue";
+      if(answerthree!==undefined){
+        answerthree.style.backgroundColor = "darkslateblue";
+        answerfour.style.backgroundColor = "darkslateblue";
+      }
+      selectedAnswer=this.innerText;
+    });
+    answertwo.addEventListener("click", function() {
+      this.style.backgroundColor = "#900080";
+      answerone.style.backgroundColor = "darkslateblue";
+      if(answerthree!==undefined){
+        answerthree.style.backgroundColor = "darkslateblue";
+        answerfour.style.backgroundColor = "darkslateblue";
+      }
+      selectedAnswer=this.innerText;
+    });
+    if(answerthree!==undefined){
+      answerthree.addEventListener("click", function() {
+        this.style.backgroundColor = "#900080";
+        answertwo.style.backgroundColor = "darkslateblue";
+        answerone.style.backgroundColor = "darkslateblue";
+        answerfour.style.backgroundColor = "darkslateblue";
+        selectedAnswer=this.innerText;
+      });
+      answerfour.addEventListener("click", function() {
+        this.style.backgroundColor = "#900080";
+        answertwo.style.backgroundColor = "darkslateblue";
+        answerthree.style.backgroundColor = "darkslateblue";
+        answerone.style.backgroundColor = "darkslateblue";
+        selectedAnswer=this.innerText;
+      });
+    }
+  }
 
 function displayQuestionsAndAnswers(){
     
@@ -143,21 +170,38 @@ function displayQuestionsAndAnswers(){
                 option.classList.add('answer-btn')
                 option.innerText=currentQuestion.options[i]
                 answer.appendChild(option)
-                //let optionsArray=[]
-                //..optionsArray.push(option)
-            //for(i=0;i<optionsArray.length;i++){
                 
-                //}
 
                
             }
             let options=document.getElementsByClassName('answer-btn')
             for(i=0;i<options.length;i++){
                 
-                options[i].addEventListener("click", changebgOfSelectedOption(i))
+                options[i].addEventListener("click", changeBackgroundOfSelectedAnswer)
             }
+
+            
+
             
         }
+
+
+
+
+
+
+
+
+
+
+
+
+    /*function displayQuestionNumber(){
+        let footer=document.getElementById('footer')
+        currentIndex++;
+        footer.innerHTML+=currentIndex;
+
+    }*/
 
 
 
@@ -202,7 +246,7 @@ function displayQuestionsAndAnswers(){
 
 function startGame(){
     displayQuestionsAndAnswers()
-    
+    //displayQuestionNumber()
     
     }
 
