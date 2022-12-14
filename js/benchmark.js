@@ -135,7 +135,7 @@ function displayQuestionsAndAnswers(){
         option.classList.add('answer-btn')
         option.classList.add('other-font')
         option.innerText=currentQuestion.options[i]
-        answer.appendChild(option)               
+        answer.appendChild(option)
     }
     changeBackgroundOfSelectedAnswer()
     let options=document.getElementsByClassName('answer-btn')
@@ -148,6 +148,7 @@ function changeBackgroundOfSelectedAnswer(){
     answerfour = document.querySelectorAll(".answer-btn")[3];
     answerone.addEventListener("click", function() {
         this.style.backgroundColor = "#900080";
+        this.classList.add('selectedAnswer')
         answertwo.style.backgroundColor = "darkslateblue";
         if(answerthree!==undefined){
             answerthree.style.backgroundColor = "darkslateblue";
@@ -185,39 +186,27 @@ function changeBackgroundOfSelectedAnswer(){
             });  
       }
     
-                }
+}
+               
+            
+            
+          let giveOptions=document.getElementById('answer-btns').children
+            let correctAnswer=currentQuestion.correct_answer
+            console.log(correctAnswer)
+            for(i=0;i<giveOptions.length;i++){
+                let givenOption=giveOptions[i]
+                if(givenOption.classList.contains('selectedAnswer')){
+                    console.log(givenOption)
 
-
-
-/*function scoreIncrement(){
-    currentIndex++;
-    let options=document.getElementById('answer-btns').childNodes
-    let currentQuestion = questions[currentIndex]
-    let correctAnswer=currentQuestion.correct_answer;
-    for(i=0;i<options.length;i++){
-        let option=options[i]
-        if(option===correctAnswer){
-            totalScore++
-        }
-    }
-    console.log(totalScore)
-    option.addEventListener("click",function(){
-                    currentIndex++;
-                    let options=document.getElementById('answer-btns').childNodes
-                    let currentQuestion = questions[currentIndex]
-                    let correctAnswer=currentQuestion.correct_answer;
-                    for(i=0;i<options.length;i++){
-                        let option=options[i]
-                        if(option===correctAnswer){
-                            totalScore++
-                        }
+                    if ((givenOption.innerText)===correctAnswer){
+                        
+                        totalScore++
                     }
-                    console.log(totalScore)
-                })
-            }
-*/
-
-
+                
+                    
+ }
+}
+console.log(totalScore)
 
 function startGame(){
     displayQuestionsAndAnswers()
