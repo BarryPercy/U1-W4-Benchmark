@@ -114,7 +114,6 @@ let selectedAnswer;
 
 
 
-
 function displayQuestionsAndAnswers(){
     let questionNum = document.getElementById("footer")
     questionNum.innerText = "QUESTION " + questionCount;
@@ -139,6 +138,18 @@ function displayQuestionsAndAnswers(){
     }
     changeBackgroundOfSelectedAnswer()
     let options=document.getElementsByClassName('answer-btn')
+    let giveOptions=document.getElementById('answer-btns').children
+    let correctAnswer=currentQuestion.correct_answer
+    console.log(correctAnswer)
+    for(i=0;i<giveOptions.length;i++){
+        let givenOption=giveOptions[i]
+        if(givenOption.classList.contains('selectedAnswer')){
+            console.log(givenOption)
+            if ((givenOption.innerText)===correctAnswer){
+                totalScore++
+            }                  
+        }
+    }
 }
 
 function changeBackgroundOfSelectedAnswer(){
@@ -189,23 +200,6 @@ function changeBackgroundOfSelectedAnswer(){
 }
                
             
-            
-          let giveOptions=document.getElementById('answer-btns').children
-            let correctAnswer=currentQuestion.correct_answer
-            console.log(correctAnswer)
-            for(i=0;i<giveOptions.length;i++){
-                let givenOption=giveOptions[i]
-                if(givenOption.classList.contains('selectedAnswer')){
-                    console.log(givenOption)
-
-                    if ((givenOption.innerText)===correctAnswer){
-                        
-                        totalScore++
-                    }
-                
-                    
- }
-}
 console.log(totalScore)
 
 function startGame(){
