@@ -105,16 +105,19 @@ const questions = [
   ];
 
 
-let totalScore=0;
+//let totalScore=0;
 let currentIndex=-1;
 let optionIndex=-1;    
 let questionCount=1;
 let selectedAnswer;
+let correct=0;
+let wrong=0;
 
 
 
 
 function displayQuestionsAndAnswers(){
+    
     let questionNum = document.getElementById("footer")
     questionNum.innerText = "QUESTION " + questionCount;
     questionCount ++;
@@ -142,22 +145,31 @@ function displayQuestionsAndAnswers(){
     let giveOptions=document.getElementById('answer-btns').children
     //console.log(giveOptions)
     let correctAnswer=currentQuestion.correct_answer
+    
     //console.log(correctAnswer)
     //console.log(typeof correctAnswer)
-    for(i=0;i<giveOptions.length;i++){
+   for(i=0;i<giveOptions.length;i++){
         let givenOption=giveOptions[i]
         //console.log(givenOption)
-        if(givenOption.classList.contains('selectedAnswer')){
-           // console.log(givenOption)
-            if ((givenOption.innerText)==correctAnswer){
-                totalScore++
-            }                  
+        if(givenOption.classList.contains('selectedAnswer')===true){
+            //console.log(givenOption)
+
+            if ((givenOption.innerText)===correctAnswer){
+                
+                correct++;
+            }       
+            else{
+                wrong++;          
         }
     }
 
+   
+}
+console.log(correct)
+//sessionStorage.setItem(correct)
+//window.location.href='results.html'
 
 }
-console.log(totalScore)
 
 function changeBackgroundOfSelectedAnswer(){
     answerone = document.querySelectorAll(".answer-btn")[0];
