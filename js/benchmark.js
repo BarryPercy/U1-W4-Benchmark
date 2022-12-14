@@ -1,3 +1,5 @@
+
+
 const questions = [
     {
       category: "Science: Computers",
@@ -104,83 +106,104 @@ const questions = [
 
   let totalScore=0;
   let currentIndex=-1;
-  let optionIndex=-1;
-function displayQuestion(){   
-        //currentIndex=Math.floor(Math.random()*questions.length-1)
-        let question = document.getElementById("question");
+  let optionIndex=-1;    
+
+
+
+ function changebgOfSelectedOption(index){
+   
+    let options=document.getElementById('answer-btns').childNodes
+    console.log(options)
+    for(let i=0;i<options.length;i++){
+        if(i===index){
+            options[i].classList.add('selectedAnswer')
+        }
+       else{
+        options[i].classList.remove('selectedAnswer')
+       }
+        }
+}
+
+
+function displayQuestionsAndAnswers(){
+    
+    let question = document.getElementById("question");
         currentIndex++;
             let currentQuestion = questions[currentIndex];
             question.innerHTML=currentQuestion.question;
-           
-}
-
-   
-function displayOptions(){
-    let answer=document.getElementById('answer-btns');
-    optionIndex++;
-    
-    let currentQuestion = questions[optionIndex];
-    let currentOptions=currentQuestion.options
-    
-    for(i=0;i<currentQuestion.options.length;i++){
-        let option=document.createElement('button')
-        option.classList.add('answer-btn')
-        option.innerText=currentQuestion.options[i]
-        answer.appendChild(option)
-    }
-    
-    
-    
-    
- 
-}
-        
-    
-        
-    
-
-    
-
-
-
-
-
-
-
-
-                 
             
+            let answer=document.getElementById('answer-btns');
+            optionIndex++;
+            
+           
+            let currentOptions=currentQuestion.options
+            answer.innerHTML=""
+            for(i=0;i<currentQuestion.options.length;i++){
+                let option=document.createElement('button')
+                option.classList.add('answer-btn')
+                option.innerText=currentQuestion.options[i]
+                answer.appendChild(option)
+                //let optionsArray=[]
+                //..optionsArray.push(option)
+            //for(i=0;i<optionsArray.length;i++){
+                
+                //}
+
+               
+            }
+            let options=document.getElementsByClassName('answer-btn')
+            for(i=0;i<options.length;i++){
+                
+                options[i].addEventListener("click", changebgOfSelectedOption(i))
+            }
+            
+        }
 
 
- 
 
 
-/*
-function selectAnswer(){
-       option.addEventListener=("click",function(){
-       
-})
-        let givenOptions=document.getElementsByClassName('answer-btn')
+/*function scoreIncrement(){
+    currentIndex++;
+    let options=document.getElementById('answer-btns').childNodes
+    let currentQuestion = questions[currentIndex]
+    let correctAnswer=currentQuestion.correct_answer;
     for(i=0;i<options.length;i++){
-        option=options[i];
-        option.onclick=function(){
-        option.classList.add('selectedAnswer')
-}
-     }
- }
-}
+        let option=options[i]
+        if(option===correctAnswer){
+            totalScore++
+        }
+    }
+    console.log(totalScore)
+    option.addEventListener("click",function(){
+                    currentIndex++;
+                    let options=document.getElementById('answer-btns').childNodes
+                    let currentQuestion = questions[currentIndex]
+                    let correctAnswer=currentQuestion.correct_answer;
+                    for(i=0;i<options.length;i++){
+                        let option=options[i]
+                        if(option===correctAnswer){
+                            totalScore++
+                        }
+                    }
+                    console.log(totalScore)
+                })
+            }
+}*/
 
-*/
-           
-            
 
-        
-    
+/*function changebgOfSelectedOption(event){
+    let allButtons=event.target.parentNode.children
+    for(let i=0;i<allButtons.length;i++)
+    if(allButtons[i].classList.contains("button-clicked")){
+        allButtons[i].classList.remove("button-clicked")
+    }
+}*/
+
 
 function startGame(){
-        displayQuestion()
-        displayOptions()
-       //selectAnswer()
+    displayQuestionsAndAnswers()
+    
+    
     }
 
   window.onload = startGame;
