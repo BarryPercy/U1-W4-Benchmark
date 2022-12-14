@@ -104,8 +104,9 @@ const questions = [
 
   let totalScore=0;
   let currentIndex=-1;
-  let optionIndex=-1
+  let optionIndex=-1;
 function displayQuestion(){   
+        //currentIndex=Math.floor(Math.random()*questions.length-1)
         let question = document.getElementById("question");
         currentIndex++;
             let currentQuestion = questions[currentIndex];
@@ -115,11 +116,12 @@ function displayQuestion(){
 
    
 function displayOptions(){
+    let answer=document.getElementById('answer-btns');
+    optionIndex++;
     
-    optionIndex=optionIndex+1;
     let currentQuestion = questions[optionIndex];
     let currentOptions=currentQuestion.options
-    let answer=document.getElementById('answer-btns');
+    
     for(i=0;i<currentQuestion.options.length;i++){
         let option=document.createElement('button')
         option.classList.add('answer-btn')
@@ -129,7 +131,15 @@ function displayOptions(){
     
     
     
+    
+ 
 }
+        
+    
+        
+    
+
+    
 
 
 
@@ -137,13 +147,7 @@ function displayOptions(){
 
 
 
-/*let nextButtonNode=document.getElementById('next-btn');
-             nextButtonNode.addEventListener("click",function(){
-                            currentIndex=currentIndex+1;
-                             displayQuestion();
-                             return;
-                             
-                 })*/
+
                  
             
 
@@ -153,11 +157,15 @@ function displayOptions(){
 
 /*
 function selectAnswer(){
-       let options=document.getElementsByClassName('answer-btn')
-        for(i=0;i<options.length;i++){
-            option=options[i];
-            option.onclick=function(){
-            option.classList.add('selectedAnswer')
+       option.addEventListener=("click",function(){
+       
+})
+        let givenOptions=document.getElementsByClassName('answer-btn')
+    for(i=0;i<options.length;i++){
+        option=options[i];
+        option.onclick=function(){
+        option.classList.add('selectedAnswer')
+}
      }
  }
 }
@@ -169,12 +177,12 @@ function selectAnswer(){
         
     
 
-    function startGame(){
+function startGame(){
         displayQuestion()
         displayOptions()
-       // selectAnswer()
+       //selectAnswer()
     }
 
-  window.onload = startGame
+  window.onload = startGame;
 
 
