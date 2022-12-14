@@ -201,10 +201,6 @@ function displayQuestionsAndAnswers(){
                 }
                
             }
-
-          
-
-            
  }
 
 
@@ -235,13 +231,13 @@ function displayQuestionsAndAnswers(){
                     console.log(totalScore)
                 })
             }
-}*/
+*/
 
 
 
 function startGame(){
     displayQuestionsAndAnswers()
-    
+    //scoreIncrement()
     
     }
 
