@@ -32,9 +32,9 @@ body{
 
 .results-title{
     font-family: 'Outfit', sans-serif;
-    font-size: 5vh;
+    font-size: 10vh;
     font-weight: bold;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
 
 .summary{
@@ -58,10 +58,11 @@ h2:after {
 #rateUs{
     position: relative;
     width: 30vh;
-    height: 10vh;
+    height: 8vh;
     font-size: 6vh;
     color: white;
     border-color: white;
+    border-width: 5px;
     background-color: transparent;
     cursor: pointer;
     bottom:27vh;
@@ -124,7 +125,7 @@ h2{
 
 .pie2{
     right:21.67vh;
-    bottom:31.6vh;
+    bottom:31.9vh;
 }
 
 /* failed test */
