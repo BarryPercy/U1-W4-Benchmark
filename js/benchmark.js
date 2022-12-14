@@ -9,9 +9,10 @@ const questions = [
       correct_answer: "Central Processing Unit",
       options: [
         "Central Process Unit",
+        "Central Processing Unit",
         "Computer Personal Unit",
         "Central Processor Unit",
-        "Central Processing Unit"
+        
       ],
     },
     {
@@ -21,7 +22,7 @@ const questions = [
       question:
         "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
       correct_answer: "Final",
-      options: ["Static", "Private", "Public","Final"],
+      options: ["Static", "Private", "Final","Public"],
     },
     {
       category: "Science: Computers",
@@ -47,7 +48,7 @@ const questions = [
       question:
         "What is the most preferred image format used for logos in the Wikimedia database?",
       correct_answer: ".svg",
-      options: [".png", ".jpeg", ".gif",".svg"],
+      options: [".png", ".svg",".jpeg", ".gif",],
     },
     {
       category: "Science: Computers",
@@ -58,8 +59,9 @@ const questions = [
       options: [
         "Counter Strike: Source",
         "Corrective Style Sheet",
+        "Cascading Style Sheet",
         "Computer Style Sheet",
-        "Cascading Style Sheet"
+        
       ],
     },
     {
@@ -71,9 +73,10 @@ const questions = [
       correct_answer: "Nougat",
       options: [
         "Ice Cream Sandwich",
+        "Nougat",
         "Jelly Bean",
         "Marshmallow",
-        "Nougat"
+        
       ],
     },
     {
@@ -99,7 +102,7 @@ const questions = [
       question:
         "Which programming language shares its name with an island in Indonesia?",
       correct_answer: "Java",
-      options: ["Python", "C", "Jakarta","Java"],
+      options: ["Python","Java", "C", "Jakarta",],
     },
   ];
 
@@ -107,57 +110,25 @@ const questions = [
   let totalScore=0;
   let currentIndex=-1;
   let optionIndex=-1;    
+let questionCount=1;
+let selectedAnswer;
 
 
 
 
-function changeBackgroundOfSelectedAnswer(){
-    answerone = document.querySelectorAll(".answer-btn")[0];
-    answertwo = document.querySelectorAll(".answer-btn")[1];
-    answerthree = document.querySelectorAll(".answer-btn")[2];
-    answerfour = document.querySelectorAll(".answer-btn")[3];
-    answerone.addEventListener("click", function() {
-      this.style.backgroundColor = "#900080";
-      answertwo.style.backgroundColor = "darkslateblue";
-      if(answerthree!==undefined){
-        answerthree.style.backgroundColor = "darkslateblue";
-        answerfour.style.backgroundColor = "darkslateblue";
-      }
-      selectedAnswer=this.innerText;
-    });
-    answertwo.addEventListener("click", function() {
-      this.style.backgroundColor = "#900080";
-      answerone.style.backgroundColor = "darkslateblue";
-      if(answerthree!==undefined){
-        answerthree.style.backgroundColor = "darkslateblue";
-        answerfour.style.backgroundColor = "darkslateblue";
-      }
-      selectedAnswer=this.innerText;
-    });
-    if(answerthree!==undefined){
-      answerthree.addEventListener("click", function() {
-        this.style.backgroundColor = "#900080";
-        answertwo.style.backgroundColor = "darkslateblue";
-        answerone.style.backgroundColor = "darkslateblue";
-        answerfour.style.backgroundColor = "darkslateblue";
-        selectedAnswer=this.innerText;
-      });
-      answerfour.addEventListener("click", function() {
-        this.style.backgroundColor = "#900080";
-        answertwo.style.backgroundColor = "darkslateblue";
-        answerthree.style.backgroundColor = "darkslateblue";
-        answerone.style.backgroundColor = "darkslateblue";
-        selectedAnswer=this.innerText;
-      });
-    }
-  }
 
 function displayQuestionsAndAnswers(){
+    let questionNum = document.getElementById("footer")
+    questionNum.innerText = "QUESTION " + questionCount;
+    questionCount ++;
     
     let question = document.getElementById("question");
         currentIndex++;
+        
             let currentQuestion = questions[currentIndex];
+            let correct_answer=currentQuestion.correct_answer;
             question.innerHTML=currentQuestion.question;
+            question.classList.add('title-font')
             
             let answer=document.getElementById('answer-btns');
             optionIndex++;
@@ -168,6 +139,7 @@ function displayQuestionsAndAnswers(){
             for(i=0;i<currentQuestion.options.length;i++){
                 let option=document.createElement('button')
                 option.classList.add('answer-btn')
+                option.classList.add('other-font')
                 option.innerText=currentQuestion.options[i]
                 answer.appendChild(option)
                 
@@ -177,32 +149,63 @@ function displayQuestionsAndAnswers(){
             let options=document.getElementsByClassName('answer-btn')
             for(i=0;i<options.length;i++){
                 
-                options[i].addEventListener("click", changeBackgroundOfSelectedAnswer)
+                options[i].addEventListener("click", changeBackgroundOfSelectedAnswer())
+
+
+    function changeBackgroundOfSelectedAnswer(){
+         answerone = document.querySelectorAll(".answer-btn")[0];
+         answertwo = document.querySelectorAll(".answer-btn")[1];
+         answerthree = document.querySelectorAll(".answer-btn")[2];
+         answerfour = document.querySelectorAll(".answer-btn")[3];
+         answerone.addEventListener("click", function() {
+             this.style.backgroundColor = "#900080";
+             answertwo.style.backgroundColor = "darkslateblue";
+             if(answerthree!==undefined){
+                 answerthree.style.backgroundColor = "darkslateblue";
+                answerfour.style.backgroundColor = "darkslateblue";
+                }
+             selectedAnswer=this.innerText;
+            //return selectedAnswer
+             });
+        answertwo.addEventListener("click", function() {
+            this.style.backgroundColor = "#900080";
+             answerone.style.backgroundColor = "darkslateblue";
+            if(answerthree!==undefined){
+                 answerthree.style.backgroundColor = "darkslateblue";
+                 answerfour.style.backgroundColor = "darkslateblue";
+                }
+              selectedAnswer=this.innerText;
+              //return selectedAnswer
+             });
+            if(answerthree!==undefined){
+       answerthree.addEventListener("click", function() {
+             this.style.backgroundColor = "#900080";
+             answertwo.style.backgroundColor = "darkslateblue";
+            answerone.style.backgroundColor = "darkslateblue";
+            answerfour.style.backgroundColor = "darkslateblue";
+            selectedAnswer=this.innerText;
+            //return selectedAnswer;
+              });
+      answerfour.addEventListener("click", function() {
+        this.style.backgroundColor = "#900080";
+        answertwo.style.backgroundColor = "darkslateblue";
+        answerthree.style.backgroundColor = "darkslateblue";
+        answerone.style.backgroundColor = "darkslateblue";
+         selectedAnswer=this.innerText;
+        //return selectedAnswer
+      });
+      
+      
+    }
+    
+                }
+               
             }
 
-            
+          
 
             
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-    /*function displayQuestionNumber(){
-        let footer=document.getElementById('footer')
-        currentIndex++;
-        footer.innerHTML+=currentIndex;
-
-    }*/
-
+ }
 
 
 
@@ -235,18 +238,10 @@ function displayQuestionsAndAnswers(){
 }*/
 
 
-/*function changebgOfSelectedOption(event){
-    let allButtons=event.target.parentNode.children
-    for(let i=0;i<allButtons.length;i++)
-    if(allButtons[i].classList.contains("button-clicked")){
-        allButtons[i].classList.remove("button-clicked")
-    }
-}*/
-
 
 function startGame(){
     displayQuestionsAndAnswers()
-    //displayQuestionNumber()
+    
     
     }
 
