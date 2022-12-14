@@ -27,7 +27,7 @@ body{
     display: inline-block;
     position: relative;
     object-fit: contain;
-    top:8vh;
+    top:5vh;
     left:15vh;
 }
 
@@ -35,14 +35,14 @@ body{
     font-family: 'Outfit', sans-serif;
     font-size: 10vh;
     font-weight: bold;
-    margin-top: 10vh;
+    margin-top: 6vh;
 }
 
 .summary{
     color: white;
     text-align: center;
     font-size: 4vh;
-    word-spacing: 7px;
+    word-spacing: 4px;
 }
 
 h2 {
@@ -57,8 +57,8 @@ h2:after {
 }
 .percentage{
     color: white;
-    font-size: 8vh;
-    margin-top: 9vh;
+    font-size: 7vh;
+    margin-top: 6vh;
 }
 
 #rateUs{
@@ -68,10 +68,10 @@ h2:after {
     font-size: 6vh;
     color: white;
     border-color: white;
-    border-width: 5px;
+    border-width: 3px;
     background-color: transparent;
     cursor: pointer;
-    bottom: 44vh;
+    bottom: 20vh;
 }
 
 /*.progress{
@@ -112,14 +112,6 @@ h2:after {
     color: #00FFFF;
 }*/
 
-.percentage:before {
-    content: "Correct";
-}
-  
-.percentage:after {
-    content: "Wrong";
-}
-
 .pie{
     --w:45vh;
     width: var(--w);
@@ -150,15 +142,17 @@ h2:after {
 }
 .pie1{
     left:23.9vh;
-    bottom:47vh;
+    bottom:19.2vh;
 }
 .pie2{
     right:21.67vh;
     bottom:23.6vh;
 }
+
 .pies{
-    translate:translateY(100vh);
+    transform:translateY(0vh);
 }
+
 .blue{
     background-color:#00FFFF;
 }
@@ -170,31 +164,60 @@ h2:after {
     background-color:#900080;
 }
 
+.percentage:before {
+    content: "Correct";
+    opacity: 65%;
+}
+  
+.percentage:after {
+    content: "Wrong";
+}
 
 .percentage-results:before{
     content: "30%";
-    
+    margin-top: -1vh;
+    opacity: 65%;
 }
 
 .percentage-results:after{
    content: "70%";
-    
+   margin-top: -1vh;
 }
 
 .percentage-results{
-    font-size: 90px;
+    font-size: 10vh;
+    font-weight: bold;
 }
 
 .question-results:before{
     content: "3/10 questions";
-    
+    margin-top: -1vh;
+    opacity: 65%;
 }
 
 .question-results:after{
    content: "7/10 questions";
-    
+   margin-top: -1vh;
 }
 
 .question-results{
-    font-size: 30px;
+    font-size: 5vh;
+    padding-left: 5vh;
+}
+
+.pie1 span{
+    font-size: 3vh;
+    font-weight: bold;
+    
+}
+
+.pie2 span{
+    font-size: 3.7vh;
+    visibility: hidden;
+}
+
+.pie2 p{
+    font-size: 2.4vh;
+    margin-top: -2vh;
+    visibility: hidden;
 }
