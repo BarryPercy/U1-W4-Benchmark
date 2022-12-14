@@ -46,7 +46,7 @@ function addBlackFilter(){
 let openFeedback = document.querySelector('.open-feedback-paragraph')
 let hr = document.querySelector('hr');
 let proceed = document.querySelector(".proceed-button");
-
+let proceedDiv = document.querySelector(".proceed-div")
 function starRatingAndFeedback(){
     if(starRating && feedbackGiven){
         proceed.classList.remove('low-opacity');
@@ -59,6 +59,7 @@ proceed.addEventListener('click',function(){
     if(proceed.classList.contains("low-opacity")){
     }else{
         content.innerHTML="";
+        proceedDiv.innerHTML="";
         hr.classList.add('hidden')
         starRating = false;
         starRatingAndFeedback();
@@ -89,5 +90,17 @@ function createTeacherRating(){
     starContainer = document.createElement('div');
     starContainer.classList.add('stars');
     content.appendChild(starContainer);
+    proceed = document.createElement('button');
+    proceed.classList.add('proceed-button');
+    proceed.classList.add('blue');
+    proceed.classList.add('low-opacity');
+    proceed.innerText='PROCEED';
+    proceedDiv.appendChild(proceed);
+    proceed.addEventListener('click',function(){
+        if(proceed.classList.contains("low-opacity")){
+        }else{
+            window.location.href = "welcome.html";
+        }
+    })
     createStars();
 }
