@@ -149,10 +149,6 @@ h2:after {
     bottom:23.6vh;
 }
 
-.pies{
-    transform:translateY(0vh);
-}
-
 .blue{
     background-color:#00FFFF;
 }
@@ -167,21 +163,30 @@ h2:after {
 .percentage:before {
     content: "Correct";
     opacity: 65%;
+    transform: translateY(10vh);
 }
   
 .percentage:after {
     content: "Wrong";
+    transform: translateY(10vh);
+}
+
+.percentage{
+    font-size: 9vh;
 }
 
 .percentage-results:before{
     content: "30%";
-    margin-top: -1vh;
+    margin-top: -1.5vh;
     opacity: 65%;
+    margin-right: 13vh;
+    transform: translateY(10vh);
 }
 
 .percentage-results:after{
    content: "70%";
-   margin-top: -1vh;
+   margin-top: -1.5vh;
+   transform: translateY(10vh);
 }
 
 .percentage-results{
@@ -193,15 +198,17 @@ h2:after {
     content: "3/10 questions";
     margin-top: -1vh;
     opacity: 65%;
+    transform: translate(-7vh, 10.2vh);
 }
 
 .question-results:after{
    content: "7/10 questions";
    margin-top: -1vh;
+   transform: translate(1vh, 10vh);
 }
 
 .question-results{
-    font-size: 5vh;
+    font-size: 3vh;
     padding-left: 5vh;
 }
 
