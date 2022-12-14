@@ -1,5 +1,3 @@
-
-
 const questions = [
     {
       category: "Science: Computers",
@@ -107,9 +105,9 @@ const questions = [
   ];
 
 
-  let totalScore=0;
-  let currentIndex=-1;
-  let optionIndex=-1;    
+let totalScore=0;
+let currentIndex=-1;
+let optionIndex=-1;    
 let questionCount=1;
 let selectedAnswer;
 
@@ -123,85 +121,71 @@ function displayQuestionsAndAnswers(){
     questionCount ++;
     
     let question = document.getElementById("question");
-        currentIndex++;
-        
-            let currentQuestion = questions[currentIndex];
-            let correct_answer=currentQuestion.correct_answer;
-            question.innerHTML=currentQuestion.question;
-            question.classList.add('title-font')
-            
-            let answer=document.getElementById('answer-btns');
-            optionIndex++;
-            
-           
-            let currentOptions=currentQuestion.options
-            answer.innerHTML=""
-            for(i=0;i<currentQuestion.options.length;i++){
-                let option=document.createElement('button')
-                option.classList.add('answer-btn')
-                option.classList.add('other-font')
-                option.innerText=currentQuestion.options[i]
-                answer.appendChild(option)
-                
+    currentIndex++;
+    let currentQuestion = questions[currentIndex];
+    let correct_answer=currentQuestion.correct_answer;
+    question.innerHTML=currentQuestion.question;
+    question.classList.add('title-font')
+    let answer=document.getElementById('answer-btns');
+    optionIndex++;
+    let currentOptions=currentQuestion.options
+    answer.innerHTML=""
+    for(i=0;i<currentQuestion.options.length;i++){
+        let option=document.createElement('button')
+        option.classList.add('answer-btn')
+        option.classList.add('other-font')
+        option.innerText=currentQuestion.options[i]
+        answer.appendChild(option)               
+    }
+    changeBackgroundOfSelectedAnswer()
+    let options=document.getElementsByClassName('answer-btn')
+}
 
-               
-            }
-            let options=document.getElementsByClassName('answer-btn')
-            for(i=0;i<options.length;i++){
-                
-                options[i].addEventListener("click", changeBackgroundOfSelectedAnswer())
-
-
-    function changeBackgroundOfSelectedAnswer(){
-         answerone = document.querySelectorAll(".answer-btn")[0];
-         answertwo = document.querySelectorAll(".answer-btn")[1];
-         answerthree = document.querySelectorAll(".answer-btn")[2];
-         answerfour = document.querySelectorAll(".answer-btn")[3];
-         answerone.addEventListener("click", function() {
-             this.style.backgroundColor = "#900080";
-             answertwo.style.backgroundColor = "darkslateblue";
-             if(answerthree!==undefined){
-                 answerthree.style.backgroundColor = "darkslateblue";
-                answerfour.style.backgroundColor = "darkslateblue";
-                }
-             selectedAnswer=this.innerText;
-            //return selectedAnswer
-             });
-        answertwo.addEventListener("click", function() {
-            this.style.backgroundColor = "#900080";
-             answerone.style.backgroundColor = "darkslateblue";
-            if(answerthree!==undefined){
-                 answerthree.style.backgroundColor = "darkslateblue";
-                 answerfour.style.backgroundColor = "darkslateblue";
-                }
-              selectedAnswer=this.innerText;
-              //return selectedAnswer
-             });
-            if(answerthree!==undefined){
-       answerthree.addEventListener("click", function() {
-             this.style.backgroundColor = "#900080";
-             answertwo.style.backgroundColor = "darkslateblue";
-            answerone.style.backgroundColor = "darkslateblue";
-            answerfour.style.backgroundColor = "darkslateblue";
-            selectedAnswer=this.innerText;
-            //return selectedAnswer;
-              });
-      answerfour.addEventListener("click", function() {
+function changeBackgroundOfSelectedAnswer(){
+    answerone = document.querySelectorAll(".answer-btn")[0];
+    answertwo = document.querySelectorAll(".answer-btn")[1];
+    answerthree = document.querySelectorAll(".answer-btn")[2];
+    answerfour = document.querySelectorAll(".answer-btn")[3];
+    answerone.addEventListener("click", function() {
         this.style.backgroundColor = "#900080";
         answertwo.style.backgroundColor = "darkslateblue";
-        answerthree.style.backgroundColor = "darkslateblue";
-        answerone.style.backgroundColor = "darkslateblue";
-         selectedAnswer=this.innerText;
+        if(answerthree!==undefined){
+            answerthree.style.backgroundColor = "darkslateblue";
+            answerfour.style.backgroundColor = "darkslateblue";
+        }
+        selectedAnswer=this.innerText;
         //return selectedAnswer
-      });
-      
-      
-    }
+    });
+    answertwo.addEventListener("click", function() {
+        this.style.backgroundColor = "#900080";
+        answerone.style.backgroundColor = "darkslateblue";
+        if(answerthree!==undefined){
+            answerthree.style.backgroundColor = "darkslateblue";
+            answerfour.style.backgroundColor = "darkslateblue";
+        }
+        selectedAnswer=this.innerText;
+        //return selectedAnswer
+        });
+        if(answerthree!==undefined){
+            answerthree.addEventListener("click", function() {
+                this.style.backgroundColor = "#900080";
+                answertwo.style.backgroundColor = "darkslateblue";
+                answerone.style.backgroundColor = "darkslateblue";
+                answerfour.style.backgroundColor = "darkslateblue";
+                selectedAnswer=this.innerText;
+                //return selectedAnswer;
+            });
+            answerfour.addEventListener("click", function() {
+                this.style.backgroundColor = "#900080";
+                answertwo.style.backgroundColor = "darkslateblue";
+                answerthree.style.backgroundColor = "darkslateblue";
+                answerone.style.backgroundColor = "darkslateblue";
+                selectedAnswer=this.innerText;
+                //return selectedAnswer
+            });  
+      }
     
                 }
-               
-            }
- }
 
 
 
@@ -237,10 +221,75 @@ function displayQuestionsAndAnswers(){
 
 function startGame(){
     displayQuestionsAndAnswers()
-    //scoreIncrement()
-    
-    }
+    //scoreIncrement()  
+}
 
   window.onload = startGame;
 
+  //Tuner stuff below here
+
+  //timer stuff below here
+
+document.getElementById("timer").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label timer-value">
+  </span>
+</div>
+`;
+const TIME_LIMIT = 20;
+document.querySelector('.timer-value').innerText = TIME_LIMIT;
+
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+
+let timerInterval = null;
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    if(timeLeft===0){
+      nextQuestion();
+      return;
+    }
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = timeLeft;
+    
+    setCircleDasharray();
+  }, 1000);
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+    
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * 283
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+function nextQuestion(){
+    console.log("go next question here");
+}
+//document.getElementById("timer").innerHTML = `...`
+startTimer();
 
