@@ -148,13 +148,16 @@ function displayQuestionsAndAnswers(){
         let givenOption=giveOptions[i]
         //console.log(givenOption)
         if(givenOption.classList.contains('selectedAnswer')){
-            //console.log(givenOption)
-            if ((givenOption.innerText)===correctAnswer){
+           // console.log(givenOption)
+            if ((givenOption.innerText)==correctAnswer){
                 totalScore++
             }                  
         }
     }
+
+
 }
+console.log(totalScore)
 
 function changeBackgroundOfSelectedAnswer(){
     answerone = document.querySelectorAll(".answer-btn")[0];
@@ -207,7 +210,7 @@ function changeBackgroundOfSelectedAnswer(){
 }
                
             
-//console.log(totalScore)
+
 
 function startGame(){
     displayQuestionsAndAnswers()
