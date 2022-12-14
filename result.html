@@ -13,26 +13,28 @@
         <h1 class="results-title">Results</h1>
         <p class="summary">The summary of your answers:</p>
         <div class="correct-wrong">
-<<<<<<< Updated upstream
-            <h2 class="percentage"></span></h2>
-            <div class="pies">
-                <div class="pie pie1" style="--p:70;--b:5vh;--c:#900080">70%</div>
-                <div class="pie pie2" style="--p:30;--b:5vh;--c:#00FFFF;"></div>
-            </div>
-            <!--<div class="circle"></div>-->
-        </div>
-        <button class="rate-us-button" onclick="rateUs();">Rate Us</button>
-    <script src="result.js">
-=======
-            <h2 class="percentage"></h2>
-            <h2 class="percentage-results"></h2>
-            <h2 class="question-results"></h2>
 
-            <div class="pies">
-                <div class="pie pie1" style="--p:70;--b:6vh;--c:#900080"><div class="failedText"><span>Oh no..<br><span style="color: #00FFFF;"> Unfortunately, you didn't<br>pass this one.</span></span>
+            <div class="opacity">
+            <div class="correct">
+                <h2 id = "correct-statement">Correct</h2>
+                <h2 id = "correct-percentage"></h2>
+                <p id = "correct-questions"></p>
+            </div>
+                    <div class="wrong">
+                <h2 id = "wrong-statement">Wrong</h2>
+                <h2 id = "wrong-percentage"></h2>
+                <p id = "wrong-questions"></p>
                     </div>
                 </div>
-                <div class="pie pie2" style="--p:30;--b:6vh;--c:#00FFFF;"><div class="passedText"><span>Congratulations!<br><span style="color: #00FFFF;"> You passed the exam.</span></span><br><p>We'll send you the certificate<br>in few minutes.<br>Check your email (including<br>promotions / spam folder)</p>
+                <!-- <h2 class="percentage"></h2>
+                <h2 class="percentage-results"></h2> another way of doing it
+                <h2 class="question-results"></h2>
+             -->
+            <div class="pies">
+                <div class="pie pie1" style="--p:0;--b:6vh;--c:#900080"><div class="failedText"><span>Oh no..<br><span style="color: #00FFFF;"> Unfortunately, you didn't<br>pass this one.</span></span>
+                    </div>
+                </div>
+                <div class="pie pie2" style="--p:0;--b:6vh;--c:#00FFFF;"><div class="passedText"><span>Congratulations!<br><span style="color: #00FFFF;"> You passed the exam.</span></span><br><br><p>We'll send you the certificate<br>in few minutes.<br>Check your email (including<br>promotions / spam folder)</p>
                     </div>
                 </div>
             </div>
@@ -40,7 +42,6 @@
         </div>
         <button id="rateUs" onclick="window.location= 'feedback.html'" value="Rate us">Rate us</button>
     <script src="./js/result.js">
->>>>>>> Stashed changes
     </script>
 </body>
 </html>

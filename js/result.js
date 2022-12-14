@@ -1,10 +1,9 @@
-<<<<<<< Updated upstream
-=======
 // if above 60%, 
 // 1.blue line has to move to 60%
 // 2.percentage,question result at the side have to change, the other side has to change opacity
 // 3.middle text has to change
 
+// giving result statement in the middle
 let questions = 10
 let correctTotal= 0
 let wrongTotal = 0
@@ -22,22 +21,55 @@ function result(x){
     else {
         failedTest.classList.add("changeForCorrect");
     };
+    changeBarValue(Total)
+    changeTheOpacity (Total)
+    changePercentage(Total)
     return Total
-  
+    return totalQuestion
 };
-
 
 document.getElementById().innerHTML= result()
 console.log(result(6),'%');
 
-function changeBarValue(){
-    let lengthOfTheBar = document.querySelector(".pie2")
-    target.style = `--p:${value};--b:6vh;--c:#900080`
-    let 
-    
-    
-    console.log(lengthOfTheBar);
 
+// moving the bar length/color
+function changeBarValue(Total){
+    let lengthOfTheBar = document.querySelector(".pie2")
+    let lengthOfRemaining = document.querySelector(".pie1")
+    let remain= 100 - Total
+    lengthOfTheBar.style = `--p:${Total};--b:6vh;--c:#00FFFF`
+    lengthOfRemaining.style = `--p:${remain};--b:6vh;--c:#900080`
+}
+
+
+// change text/result opacity
+function changeTheOpacity(Total){
+    let correctOpacity = document.querySelector(".correct")
+    let wrongOpacity = document.querySelector(".wrong")
+    if( Total >= 60){
+        wrongOpacity.classList.add("opacityChange");
+    }else{
+        correctOpacity.classList.add("opacityChange");
+    }
+}
+
+function changePercentage(Total){
+    let correctPercentage = document.getElementById("correct-percentage")
+    let wrongPercentage = document.getElementById("wrong-percentage")
+    let remainPercentage = (100 - Total);
+    correctPercentage.innerText += Total + "%";
+    wrongPercentage.innerText += remainPercentage + "%";
+}
+
+function changeQuestions(y){
+    let totalCorrectQuestions = document.getElementById("correct-questions")
+    let totalWrongQuestions = document.getElementById("wrong-questions")
+
+    totalQuestion = questions - y
+    let remainQuestions = (10 - totalQuestion);
+
+    totalCorrectQuestions.innerText += totalQuestion + "/10 questions";
+    totalWrongQuestions.innerText += remainQuestions + "/10 questions";
 
 }
->>>>>>> Stashed changes
+
