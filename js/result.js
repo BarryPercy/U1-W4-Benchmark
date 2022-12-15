@@ -4,6 +4,9 @@
 // 3.middle text has to change
 
 // giving result statement in the middle
+
+
+correctAns=sessionStorage.getItem("correctAns")
 let questions = 10
 let correctTotal= 0
 let wrongTotal = 0
@@ -49,6 +52,7 @@ function changeTheOpacity(Total){
     }
 }
 
+//change the percentage of the results at the side
 function changePercentage(Total){
     let correctPercentage = document.getElementById("correct-percentage")
     let wrongPercentage = document.getElementById("wrong-percentage")
@@ -57,6 +61,7 @@ function changePercentage(Total){
     wrongPercentage.innerText += remainPercentage + "%";
 }
 
+// change the question statement at the sides
 function changeQuestions(y){
     let totalCorrectQuestions = document.getElementById("correct-questions")
     let totalWrongQuestions = document.getElementById("wrong-questions")
@@ -69,20 +74,11 @@ function changeQuestions(y){
 
 }
 
-function addLoadEvent(func) { 
-	var oldonload = window.onload; 
-	if (typeof window.onload != 'function') { 
-		window.onload = func; 
-	} else { 
-		window.onload = function() { 
-			if (oldonload) { 
-				oldonload(); 
-			} 
-			func(); 
-		} 
-	} 
+window.onload = function(){
+    runTheFunctions()
 } 
 
+<<<<<<< HEAD
 addLoadEvent(changePercentage); 
 addLoadEvent(changeQuestions); 
 addLoadEvent(changeBarValue); 
@@ -93,3 +89,30 @@ addLoadEvent(function(
 }); 
 
 windows.onload = result(7);
+=======
+function runTheFunctions(){
+    changeQuestions(correctAns) 
+    result(correctAns)
+}
+
+
+// function addLoadEvent(func) { 
+// 	var oldonload = window.onload; 
+// 	if (typeof window.onload != 'function') { 
+// 		window.onload = func; 
+// 	} else { 
+// 		window.onload = function() { 
+// 			if (oldonload) { 
+// 				oldonload(); 
+// 			} 
+// 			func(); 
+// 		} 
+// 	} 
+// } 
+
+// addLoadEvent(changePercentage);  
+// addLoadEvent(changeQuestions); 
+// addLoadEvent(function() { 
+//       result(7);
+// }); 
+>>>>>>> d48f164958a0165079f35879470b5ac7dca45882
