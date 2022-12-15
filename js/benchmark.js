@@ -111,7 +111,13 @@ let optionIndex=-1;
 let questionCount=1;
 let selectedAnswer;
 
-
+function processNextQuestion(){
+  timePassed = 0;
+  nextQuestionClicked=true;
+  displayQuestionsAndAnswers();
+  clearInterval(timerInterval);
+  startTimer();
+}
 
 
 function displayQuestionsAndAnswers(){
@@ -240,14 +246,15 @@ document.querySelector('.timer-value').innerText = TIME_LIMIT;
 
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
-
+let nextQuestionClicked = false;
 let timerInterval = null;
 
 function startTimer() {
+  timeLeft = 30;
+  nextQuestionClicked=false;
   timerInterval = setInterval(() => {
-    if(timeLeft===0){
-      nextQuestion();
-      return;
+    if(timeLeft===0||nextQuestionClicked===true){
+      processNextQuestion();  
     }
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
@@ -269,9 +276,6 @@ function setCircleDasharray() {
   document
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
-}
-function nextQuestion(){
-    console.log("go next question here");
 }
 //document.getElementById("timer").innerHTML = `...`
 startTimer();
