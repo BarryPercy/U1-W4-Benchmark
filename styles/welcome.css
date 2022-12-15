@@ -85,24 +85,25 @@ left:80px;
 }
 
 .proceed-button button{
-
-    width:200px;
-    height:55px;
-    padding: 10px;
+    font-family: 'Outfit', sans-serif;
+    width: 17vh;
+    height: 7vh;
+    border-radius:1vh;
     text-align: center;
     border: none;
     display: inline-block;
     font-size: 1.2em;
     background-color: #00ffff;
     font-weight: bold;
-    -webkit-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
-    -moz-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
-    box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    color: #0d0a34;
+    -webkit-box-shadow: -3px 3px 61px 1px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 61px 1px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 61px 1px rgba(0,255,255,0.59);
     
     
 }
 
-#proceed-button button:hover{
+.proceed-button button:hover{
     -webkit-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
     -moz-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
     box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
