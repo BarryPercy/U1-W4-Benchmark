@@ -125,6 +125,7 @@ function processNextQuestion(){
 }
 
 
+
 function displayQuestionsAndAnswers(){
 
     
@@ -135,10 +136,15 @@ function displayQuestionsAndAnswers(){
     
     let question = document.getElementById("question");
     currentIndex++;
+    //let randomQuestionArray=questions
+    //let NumberOfQuestions=randomQuestionArray.length;
+    //let randomQuestion=Math.floor(Math.random()*randomQuestionArray.length)
+    //let currentIndex=randomQuestionArray[randomQuestion]
     let currentQuestion = questions[currentIndex];
     let correct_answer=currentQuestion.correct_answer;
     question.innerHTML=currentQuestion.question;
     question.classList.add('title-font')
+   // randomQuestionArray.splice(randomQuestion,1)
     let answer=document.getElementById('answer-btns');
     optionIndex++;
     let currentOptions=currentQuestion.options
