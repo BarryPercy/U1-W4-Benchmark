@@ -78,6 +78,18 @@ window.onload = function(){
     runTheFunctions()
 } 
 
+<<<<<<< HEAD
+addLoadEvent(changePercentage); 
+addLoadEvent(changeQuestions); 
+addLoadEvent(changeBarValue); 
+addLoadEvent(changeTheOpacity); 
+addLoadEvent(result(7));
+addLoadEvent(function(
+) { 
+}); 
+
+windows.onload = result(7);
+=======
 function runTheFunctions(){
     changeQuestions(correctAns) 
     result(correctAns)
@@ -103,3 +115,4 @@ function runTheFunctions(){
 // addLoadEvent(function() { 
 //       result(7);
 // }); 
+>>>>>>> d48f164958a0165079f35879470b5ac7dca45882
