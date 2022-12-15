@@ -95,9 +95,7 @@ input{
     margin-top: 8vh;
 }
 .proceed-button{
-    -webkit-box-shadow: 0px 3px 47px 8px #00FFFF;
-    -moz-box-shadow: 0px 3px 47px 8px #00FFFF;
-    box-shadow: 0px 3px 47px 8px #00FFFF;
+    box-shadow: 0px 1px 20px 0px #00FFFF;
     border:none;
     margin-top: 5vh;
     width: 20vh;
@@ -115,6 +113,7 @@ input{
 }
 .low-opacity{
     opacity:20%;
+    box-shadow: 0px 0px 0px 0px #00FFFF;
 }
 .hidden{
     display:none;
@@ -122,4 +121,48 @@ input{
 
 .star-hover{
     filter:drop-shadow(0px 0px 5px #00FFFF);
+}
+.move-to-left{
+    transform: translateX(-200vh);
+    transition:1s;
+}
+.be-right{
+    transform:translateX(200vh);
+}
+
+.move-to-left-right{
+    animation: moveInFromRight 1s ease-in-out forwards;
+    transform: translateX(100%);
+  }
+  
+  @keyframes moveInFromRight {
+    0% {
+      opacity:0;
+      transform: translateX(100%);
+    }
+    100% {
+        opacity:100;
+        transform: translateX(0);
+
+    }
+}
+.move-from-mid-to-left{
+    animation: moveMidToLeft 1s ease-in-out forwards;
+    transform: translateX(100%);
+  }
+  
+  @keyframes moveMidToLeft {
+    0% {
+      opacity:100;
+      transform: translateX(0%);
+    }
+    100% {
+        opacity:0;
+        transform: translateX(-100%);
+
+    }
+}
+.appear-higher{
+    position:relative;
+    top:-51.5vh;
 }

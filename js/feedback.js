@@ -46,27 +46,30 @@ function addBlackFilter(){
 let openFeedback = document.querySelector('.open-feedback-paragraph')
 let hr = document.querySelector('hr');
 let proceed = document.querySelector(".proceed-button");
-let proceedDiv = document.querySelector(".proceed-div")
-function starRatingAndFeedback(){
-    if(starRating && feedbackGiven){
-        proceed.classList.remove('low-opacity');
-    }else{
-        proceed.classList.add('low-opacity');
-    }
-}
+let proceedDiv = document.querySelector(".proceed-div");
+let proceedDiv2 = document.querySelector('.proceed-div2');
 let content = document.querySelector(".content");
+let content2 = document.querySelector(".content2");
 proceed.addEventListener('click',function(){
     if(proceed.classList.contains("low-opacity")){
     }else{
-        content.innerHTML="";
-        proceedDiv.innerHTML="";
+        content.classList.add('move-from-mid-to-left');
+        proceedDiv.classList.add('move-from-mid-to-left');
         hr.classList.add('hidden')
         starRating = false;
         starRatingAndFeedback();
         createTeacherRating();
+        content.classList.add('appear-higher');
+        content2.classList.add('move-to-left-right');
+        setTimeout(function() {
+            content.innerHTML="";
+            proceedDiv.innerHTML="";
+          }, 1000);
+        proceedDiv2.classList.add('move-to-left-right');
+        content2.classList.remove('move-from-mid-to-left');
+        proceedDiv2.classList.remove('move-from-mid-to-left');  
     }
 })
-
 let feedbackText = document.querySelector('.text-field');
 feedbackText.addEventListener('input', function(){
     if(feedbackText.value===''){
@@ -82,20 +85,20 @@ function createTeacherRating(){
     let teacherTitle = document.createElement('h1');
     teacherTitle.classList.add('h1-titles');
     teacherTitle.innerText=('About your Teacher');
-    content.appendChild(teacherTitle);
+    content2.appendChild(teacherTitle);
     let oneToTen = document.createElement('p');
     oneToTen.classList.add('rating-text');
     oneToTen.innerText=('From 1 to 10 how do you rate him/her?'); 
-    content.appendChild(oneToTen);
+    content2.appendChild(oneToTen);
     starContainer = document.createElement('div');
     starContainer.classList.add('stars');
-    content.appendChild(starContainer);
+    content2.appendChild(starContainer);
     proceed = document.createElement('button');
     proceed.classList.add('proceed-button');
     proceed.classList.add('blue');
     proceed.classList.add('low-opacity');
     proceed.innerText='PROCEED';
-    proceedDiv.appendChild(proceed);
+    proceedDiv2.appendChild(proceed);
     proceed.addEventListener('click',function(){
         if(proceed.classList.contains("low-opacity")){
         }else{
@@ -103,4 +106,11 @@ function createTeacherRating(){
         }
     })
     createStars();
+}
+function starRatingAndFeedback(){
+    if(starRating && feedbackGiven){
+        proceed.classList.remove('low-opacity');
+    }else{
+        proceed.classList.add('low-opacity');
+    }
 }
