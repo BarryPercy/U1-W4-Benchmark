@@ -33,8 +33,8 @@ function changeBarValue(Total){
     let lengthOfTheBar = document.querySelector(".pie2")
     let lengthOfRemaining = document.querySelector(".pie1")
     let remain= 100 - Total
-    lengthOfTheBar.style = `--p:${Total};--b:6vh;--c:#00FFFF`
-    lengthOfRemaining.style = `--p:${remain};--b:6vh;--c:#900080`
+    lengthOfTheBar.style = `--p:${Total};--b:5vh;--c:#00FFFF`
+    lengthOfRemaining.style = `--p:${remain};--b:5vh;--c:#900080`
 }
 
 
