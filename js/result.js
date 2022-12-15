@@ -28,10 +28,6 @@ function result(x){
     return totalQuestion
 };
 
-document.getElementById().innerHTML= result()
-console.log(result(6),'%');
-
-
 // moving the bar length/color
 function changeBarValue(Total){
     let lengthOfTheBar = document.querySelector(".pie2")
@@ -53,6 +49,7 @@ function changeTheOpacity(Total){
     }
 }
 
+//change the percentage of the results at the side
 function changePercentage(Total){
     let correctPercentage = document.getElementById("correct-percentage")
     let wrongPercentage = document.getElementById("wrong-percentage")
@@ -61,6 +58,7 @@ function changePercentage(Total){
     wrongPercentage.innerText += remainPercentage + "%";
 }
 
+// change the question statement at the sides
 function changeQuestions(y){
     let totalCorrectQuestions = document.getElementById("correct-questions")
     let totalWrongQuestions = document.getElementById("wrong-questions")
@@ -73,24 +71,32 @@ function changeQuestions(y){
 
 }
 
-function addLoadEvent(func) { 
-	var oldonload = window.onload; 
-	if (typeof window.onload != 'function') { 
-		window.onload = func; 
-	} else { 
-		window.onload = function() { 
-			if (oldonload) { 
-				oldonload(); 
-			} 
-			func(); 
-		} 
-	} 
+window.onload = function(){
+    runTheFunctions()
 } 
 
-addLoadEvent(changePercentage); 
-addLoadEvent(changeQuestions); 
-addLoadEvent(changeBarValue); 
-addLoadEvent(changeTheOpacity); 
-addLoadEvent(function() { 
-       /* more code to run on page load */ 
-}); 
+function runTheFunctions(){
+    changeQuestions(6) 
+    result(6)
+}
+
+
+// function addLoadEvent(func) { 
+// 	var oldonload = window.onload; 
+// 	if (typeof window.onload != 'function') { 
+// 		window.onload = func; 
+// 	} else { 
+// 		window.onload = function() { 
+// 			if (oldonload) { 
+// 				oldonload(); 
+// 			} 
+// 			func(); 
+// 		} 
+// 	} 
+// } 
+
+// addLoadEvent(changePercentage);  
+// addLoadEvent(changeQuestions); 
+// addLoadEvent(function() { 
+//       result(7);
+// }); 
