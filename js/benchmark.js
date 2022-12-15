@@ -118,17 +118,18 @@ let questionIndex=0;
 function processNextQuestion(){
   timePassed = 0;
   nextQuestionClicked=true;
+  scoreIncrement();
   displayQuestionsAndAnswers();
   clearInterval(timerInterval);
   startTimer();
-  scoreIncrement();
+  
 }
 
 
 function displayQuestionsAndAnswers(){
 
     
-if(currentIndex===questions.length){
+if(currentIndex===questions.length-1){
     
     endGame();
 }
