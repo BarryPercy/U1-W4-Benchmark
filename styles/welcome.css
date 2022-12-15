@@ -12,9 +12,11 @@ body{
     max-width:850px;
     height:700px;
     margin:auto;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 8vh;
+    margin-bottom: 8vh;
     position: relative;
+    top:9vh;
+    left:10vh;
 }
 .epicode-logo{
     max-width:20vh;
@@ -35,13 +37,9 @@ body{
 }
 #welcome-page-title{
     color: white;
-   
-    font-size: 2rem;
-    position:absolute;
-    left: 80px;
-    top:65px;
+    font-size: 4vh;
     font-weight: lighter;
-    line-height: 60px;
+    line-height: 6vh;
     
 
 }
@@ -56,32 +54,18 @@ body{
         color:#D20094;
       
     }
-
-#instructions{
-    position:absolute;
-    left:80px;
-    top:250px;
-}
 .white{
     color: white;
 }
 .welcome-page-list{
-    margin: 10px;
+    margin: 1vh;
 }
-
-#promise{
-position:absolute;
-bottom:130px;
-left:80px;
-}
-
-
-
 
 .proceed-button{
-    position: absolute;
-    bottom:130px;
-    right:80px;
+    position:relative;
+    float:right;
+    right:10vh;
+    font-size: 2vh;
 }
 
 .proceed-button button{
@@ -91,7 +75,6 @@ left:80px;
     border-radius:1vh;
     text-align: center;
     border: none;
-    display: inline-block;
     font-size: 1.2em;
     background-color: #00ffff;
     font-weight: bold;
@@ -111,4 +94,10 @@ left:80px;
 
 .low-opacity{
     opacity:20%;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+#promise{
+    position: relative;
+    top:5vh;
 }
