@@ -150,22 +150,35 @@ function displayQuestionsAndAnswers(){
     //console.log(typeof correctAnswer)
    for(i=0;i<giveOptions.length;i++){
         let givenOption=giveOptions[i]
+        let list=givenOption.classList
+        //console.log(list)
         //console.log(givenOption)
-        if(givenOption.classList.contains('selectedAnswer')===true){
-            //console.log(givenOption)
+        if(list.length===3){
+            if ((givenOption.innerText)===correctAnswer){
+                
+                correct++;
+                //console.log(correct)
+            }       
+            else{
+                wrong++;          
+        }
+        }
+        /*if(givenOption.classList.contains('selectedAnswer')===true){
+            
 
             if ((givenOption.innerText)===correctAnswer){
                 
                 correct++;
+                console.log(correct)
             }       
             else{
                 wrong++;          
         }
     }
-
-   
+*/
+   console.log(correct)
 }
-console.log(correct)
+//console.log(correct)
 //sessionStorage.setItem(correct)
 //window.location.href='results.html'
 
