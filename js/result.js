@@ -28,10 +28,6 @@ function result(x){
     return totalQuestion
 };
 
-document.getElementById().innerHTML= result()
-console.log(result(6),'%');
-
-
 // moving the bar length/color
 function changeBarValue(Total){
     let lengthOfTheBar = document.querySelector(".pie2")
@@ -91,6 +87,9 @@ addLoadEvent(changePercentage);
 addLoadEvent(changeQuestions); 
 addLoadEvent(changeBarValue); 
 addLoadEvent(changeTheOpacity); 
-addLoadEvent(function() { 
-       /* more code to run on page load */ 
+addLoadEvent(result(7));
+addLoadEvent(function(
+) { 
 }); 
+
+windows.onload = result(7);
