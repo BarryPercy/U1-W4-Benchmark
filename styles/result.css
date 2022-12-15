@@ -17,7 +17,6 @@ body{
     display:block;
     text-align: center;
     color:white;
-    font-size: 2.5vh;
 }
 
 .epicode-logo{
@@ -32,16 +31,17 @@ body{
 
 .results-title{
     font-family: 'Outfit', sans-serif;
-    font-size: 10vh;
+    font-size: 60px;
     font-weight: bold;
     margin-top: 10vh;
+    opacity: 90%;
 }
 
 .summary{
     color: white;
     text-align: center;
     font-size: 4vh;
-    word-spacing: 4px;
+    word-spacing: 1vh;
     opacity: 80%;
 }
 /* h2 {
@@ -59,33 +59,38 @@ h2:after {
     position: relative;
     width: 30vh;
     height: 8vh;
-    font-size: 6vh;
     color: white;
     border-color: white;
-    border-width: 5px;
+    border-width: 0.4vh;
     background-color: transparent;
     cursor: pointer;
-    bottom:27vh;
+    bottom:29vh;
+    font-size: 4vh;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
+    opacity: 90%;
 }
 
 .correct{
-    transform: translate(35vh,19vh);
+    transform: translate(31vh,19vh);
     text-align: left;
 }
 
 .wrong{
-    transform: translate(-35vh,3vh);
+    transform: translate(-30.5vh,0vh);
     text-align: right;
 }
 
 h2{
-    font-size: 8vh;
+    font-size: 9vh;
 }
 #correct-percentage{
+    font-family: 'Outfit', sans-serif;
     font-weight: bold;
 }
 
 #wrong-percentage{
+    font-family: 'Outfit', sans-serif;
     font-weight: bold;
 }
 
@@ -119,30 +124,32 @@ h2{
     transform: scale(-1, 1);
 }
 .pie1{
-    left:23.9vh;
-    bottom:28.2vh;
+    left:23.1vh;
+    bottom:31.7vh;
 }
 
 .pie2{
-    right:21.67vh;
-    bottom:31.9vh;
+    right:22.37vh;
+    bottom:34.9vh;
 }
 
 /* failed test */
 .pie1 span{
     font-size: 3vh;
-    font-weight: bold; 
 }
 
 /* passed test */
 .pie2 span{
-    font-size: 3.7vh;
+    font-size: 3.2vh;
+    font-family: 'Outfit', sans-serif;
+    font-weight: bold;
 }
 
 /* passed test */
 .pie2 p{                    
-    font-size: 2.4vh;
+    font-size: 2.2vh;
     margin-top: -2vh;
+    opacity: 70%;
 }
 
 .passedText{
@@ -160,6 +167,15 @@ h2{
     opacity: 65%;
 }
 
+#correct-questions{
+    font-size: 2.5vh;
+    opacity: 75%;
+}
+
+#wrong-questions{
+    font-size: 2.5vh;
+    opacity: 75%;
+}
 
 /*.progress{
     width: 200px;
