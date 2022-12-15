@@ -192,9 +192,6 @@ function scoreIncrement(){
     //}
 questionIndex++;
 console.log(correct)
-//sessionStorage.setItem(correct)
-//window.location.href='results.html'
-
 }
 
 
