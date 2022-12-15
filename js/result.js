@@ -99,8 +99,4 @@ function runTheFunctions(){
 // addLoadEvent(changeQuestions); 
 // addLoadEvent(function() { 
 //       result(7);
-<<<<<<< Updated upstream
 // }); 
-=======
-// }); 
->>>>>>> Stashed changes

@@ -118,17 +118,21 @@ let questionIndex=0;
 function processNextQuestion(){
   timePassed = 0;
   nextQuestionClicked=true;
+  scoreIncrement();
   displayQuestionsAndAnswers();
   clearInterval(timerInterval);
   startTimer();
-  scoreIncrement();
+  
 }
 
 
 function displayQuestionsAndAnswers(){
 
     
+if(currentIndex===questions.length-1){
     
+    endGame();
+}
     let questionNum = document.getElementById("footer")
     questionNum.innerText = "QUESTION " + questionCount;
     questionCount ++;
@@ -165,9 +169,7 @@ function scoreIncrement(){
     //let giveOptions=document.getElementById('answer-btns').children
     //console.log(giveOptions)
     let currentQuestion = questions[questionIndex];
-    //let currentOptions=questions[questionIndex].options
-    //console.log(currentOptions)
-    //console.log(currentQuestion)
+   
     let correctAnswer=currentQuestion.correct_answer
     if(correctAnswer===selectedAnswer){
         correct++
@@ -175,25 +177,16 @@ function scoreIncrement(){
     else{
         wrong++
     }
-    //console.log(correctAnswer)
-    //console.log(correctAnswer)
-    //for(i=0;i<currentOptions.length;i++){
-        //let currentOption=currentOptions[i]
-        //console.log(currentOption)
-        //console.log(givenOption)
-        //let list=givenOption.classList
-        //if(currentOption.classList.contains('selectedAnswer')===true){
-            //if ((currentOption.innerText)===correctAnswer){
-              //  correct++;
-            //}       
-            //else{
-            //    wrong++;          
-        //}
-    //}
+   
 questionIndex++;
-console.log(correct)
-//sessionStorage.setItem(correct)
-//window.location.href='results.html'
+if(questionIndex===questions.length){
+    let correctAns=correct
+    console.log(correctAns)
+    sessionStorage.setItem("correctAns",correctAns)
+   
+    
+}
+
 
 }
 
@@ -258,7 +251,9 @@ function changeBackgroundOfSelectedAnswer(){
     
 }
                
-            
+function endGame(){
+window.location.href="result.html"
+}
 
 
 function startGame(){
