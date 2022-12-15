@@ -34,10 +34,29 @@ color:white;
 
 .controls{
     position: absolute;
-    top:500px;
-    left:600px
+    top:465px;
+    left:380px;
 }
+.controls button{
+    width:100px;
+    height:40px;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    font-size: 1em;
+    background-color: #00ffff;
+    font-weight: bold;
+    -webkit-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+}
+.controls button:hover{
+    -webkit-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
 
+}
 .answer-btn{
     background-color: darkslateblue;
     border-radius: 20px;
@@ -47,6 +66,7 @@ color:white;
     margin:10px;
     border:1px solid silver;
     outline: none;
+    color:white;
 }
 .answer-btn:hover{
     border-color: black;
@@ -68,11 +88,15 @@ color:white;
 }
 #footer{
     position: absolute;
-    bottom:100px;
-    left:500px;
+    bottom:150px;
+    left:380px;
+    color:white;
+    font-size: 1rem;
 }
-#next-btn{
-    position:absolute;
-    bottom:0px;
-    left:100px;
+.title-font{
+    font-family: 'Outfit', sans-serif;
+}
+.other-font{
+    font-family: 'Inter', sans-serif;
+    font-size: .9rem;
 }
