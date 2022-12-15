@@ -105,11 +105,13 @@ const questions = [
   ];
 
 
-let totalScore=0;
+//let totalScore=0;
 let currentIndex=-1;
 let optionIndex=-1;    
 let questionCount=1;
 let selectedAnswer;
+let correct=0;
+let wrong=0;
 
 function processNextQuestion(){
   timePassed = 0;
@@ -121,6 +123,7 @@ function processNextQuestion(){
 
 
 function displayQuestionsAndAnswers(){
+    
     let questionNum = document.getElementById("footer")
     questionNum.innerText = "QUESTION " + questionCount;
     questionCount ++;
@@ -143,19 +146,35 @@ function displayQuestionsAndAnswers(){
         answer.appendChild(option)
     }
     changeBackgroundOfSelectedAnswer()
+
     let options=document.getElementsByClassName('answer-btn')
     let giveOptions=document.getElementById('answer-btns').children
+    //console.log(giveOptions)
     let correctAnswer=currentQuestion.correct_answer
-    console.log(correctAnswer)
-    for(i=0;i<giveOptions.length;i++){
+    
+    //console.log(correctAnswer)
+    //console.log(typeof correctAnswer)
+   for(i=0;i<giveOptions.length;i++){
         let givenOption=giveOptions[i]
-        if(givenOption.classList.contains('selectedAnswer')){
-            console.log(givenOption)
+        //console.log(givenOption)
+        if(givenOption.classList.contains('selectedAnswer')===true){
+            //console.log(givenOption)
+
             if ((givenOption.innerText)===correctAnswer){
-                totalScore++
-            }                  
+                
+                correct++;
+            }       
+            else{
+                wrong++;          
         }
     }
+
+   
+}
+console.log(correct)
+//sessionStorage.setItem(correct)
+//window.location.href='results.html'
+
 }
 
 function changeBackgroundOfSelectedAnswer(){
@@ -176,6 +195,7 @@ function changeBackgroundOfSelectedAnswer(){
     });
     answertwo.addEventListener("click", function() {
         this.style.backgroundColor = "#900080";
+        this.classList.add('selectedAnswer')
         answerone.style.backgroundColor = "darkslateblue";
         if(answerthree!==undefined){
             answerthree.style.backgroundColor = "darkslateblue";
@@ -187,6 +207,7 @@ function changeBackgroundOfSelectedAnswer(){
         if(answerthree!==undefined){
             answerthree.addEventListener("click", function() {
                 this.style.backgroundColor = "#900080";
+                this.classList.add('selectedAnswer')
                 answertwo.style.backgroundColor = "darkslateblue";
                 answerone.style.backgroundColor = "darkslateblue";
                 answerfour.style.backgroundColor = "darkslateblue";
@@ -195,6 +216,7 @@ function changeBackgroundOfSelectedAnswer(){
             });
             answerfour.addEventListener("click", function() {
                 this.style.backgroundColor = "#900080";
+                this.classList.add('selectedAnswer')
                 answertwo.style.backgroundColor = "darkslateblue";
                 answerthree.style.backgroundColor = "darkslateblue";
                 answerone.style.backgroundColor = "darkslateblue";
@@ -206,7 +228,7 @@ function changeBackgroundOfSelectedAnswer(){
 }
                
             
-console.log(totalScore)
+
 
 function startGame(){
     displayQuestionsAndAnswers()
