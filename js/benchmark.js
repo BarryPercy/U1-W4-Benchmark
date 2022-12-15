@@ -2,7 +2,7 @@ const questions = [
     {
       category: "Science: Computers",
       type: "multiple",
-      difficulty: "easy",
+      difficulty: "medium",
       question: "What does CPU stand for?",
       correct_answer: "Central Processing Unit",
       options: [
@@ -16,7 +16,7 @@ const questions = [
     {
       category: "Science: Computers",
       type: "multiple",
-      difficulty: "easy",
+      difficulty: "hard",
       question:
         "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
       correct_answer: "Final",
@@ -33,7 +33,7 @@ const questions = [
     {
       category: "Science: Computers",
       type: "boolean",
-      difficulty: "easy",
+      difficulty: "medium",
       question:
         "Pointers were not used in the original C programming language; they were added later on in C++.",
       correct_answer: "False",
@@ -42,7 +42,7 @@ const questions = [
     {
       category: "Science: Computers",
       type: "multiple",
-      difficulty: "easy",
+      difficulty: "medium",
       question:
         "What is the most preferred image format used for logos in the Wikimedia database?",
       correct_answer: ".svg",
@@ -88,7 +88,7 @@ const questions = [
     {
       category: "Science: Computers",
       type: "boolean",
-      difficulty: "easy",
+      difficulty: "medium",
       question: "Linux was first created as an alternative to Windows XP.",
       correct_answer: "False",
       options: ["True","False"],
@@ -96,7 +96,7 @@ const questions = [
     {
       category: "Science: Computers",
       type: "multiple",
-      difficulty: "easy",
+      difficulty: "medium",
       question:
         "Which programming language shares its name with an island in Indonesia?",
       correct_answer: "Java",
