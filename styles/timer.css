@@ -57,8 +57,8 @@ body{
 }
   
 #timer{
-    position:relative;
+    position:absolute;
+    transform: translateY(-5vh);
     float:right;
-    top:2vh;
-    right:5vh;
+    right:20vh;
 }
