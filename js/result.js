@@ -6,7 +6,7 @@
 // giving result statement in the middle
 
 
-sessionStorage.getItem("result",result)
+correctAns=sessionStorage.getItem("correctAns")
 let questions = 10
 let correctTotal= 0
 let wrongTotal = 0
@@ -79,8 +79,8 @@ window.onload = function(){
 } 
 
 function runTheFunctions(){
-    changeQuestions(6) 
-    result(6)
+    changeQuestions(correctAns) 
+    result(correctAns)
 }
 
 

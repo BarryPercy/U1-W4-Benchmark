@@ -179,9 +179,9 @@ function scoreIncrement(){
    
 questionIndex++;
 if(questionIndex===questions.length){
-    result=correct
-    console.log(result)
-    sessionStorage.setItem("result",result)
+    let correctAns=correct
+    console.log(correctAns)
+    sessionStorage.setItem("correctAns",correctAns)
    
     
 }
