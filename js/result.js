@@ -66,8 +66,8 @@ function changeQuestions(y){
     totalQuestion = questions - y
     let remainQuestions = (10 - totalQuestion);
 
-    totalCorrectQuestions.innerText += totalQuestion + "/10 questions";
-    totalWrongQuestions.innerText += remainQuestions + "/10 questions";
+    totalCorrectQuestions.innerText += remainQuestions + "/10 questions";
+    totalWrongQuestions.innerText += totalQuestion + "/10 questions";
 
 }
 
@@ -99,4 +99,8 @@ function runTheFunctions(){
 // addLoadEvent(changeQuestions); 
 // addLoadEvent(function() { 
 //       result(7);
+<<<<<<< Updated upstream
 // }); 
+=======
+// }); 
+>>>>>>> Stashed changes
