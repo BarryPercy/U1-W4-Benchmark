@@ -4,6 +4,9 @@
 // 3.middle text has to change
 
 // giving result statement in the middle
+
+
+sessionStorage.getItem("result",result)
 let questions = 10
 let correctTotal= 0
 let wrongTotal = 0
