@@ -16,6 +16,7 @@ body{
     top:8vh;
     left:15vh;
 }
+
 .container{
     max-width:850px;
     height:610px;
@@ -105,4 +106,7 @@ body{
 .other-font{
     font-family: 'Inter', sans-serif;
     font-size: .9rem;
+}
+#count{
+    color:#900080;
 }

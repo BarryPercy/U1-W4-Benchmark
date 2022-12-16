@@ -139,8 +139,8 @@ function displayQuestionsAndAnswers(){
     if(currentIndex===questions.length-1){ 
         endGame();
     }
-    let questionNum = document.getElementById("footer")
-    questionNum.innerText = "QUESTION " + questionCount +"/10";
+    let questionNum = document.getElementById("questionno")
+    questionNum.innerText = "QUESTION " + questionCount 
     questionCount ++;
     let question = document.getElementById("question");
     currentIndex++;
