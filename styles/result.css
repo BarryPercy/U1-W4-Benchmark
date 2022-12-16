@@ -57,8 +57,8 @@ h2:after {
 
 #rateUs{
     position: relative;
-    width: 30vh;
-    height: 8vh;
+    width: 25vh;
+    height: 6.5vh;
     color: white;
     border-color: white;
     border-width: 0.4vh;
@@ -130,8 +130,8 @@ h2{
     transform: scale(-1, 1);
 }
 .pie1{
-    left:19.24vh;
-    bottom:21.5vh;
+    left:19vh;
+    bottom:21.7vh;
 }
 
 .pie2{
@@ -186,91 +186,4 @@ h2{
     font-size: 1.7vh;
     opacity: 65%;
 }
-
-/*.progress{
-    width: 200px;
-    height: 200px;
-    position:relative;
-}
-
-.outer{
-    text-align: center;
-    height: 20vh;
-    width: 20vh;
-    border-radius: 50%;
-    box-shadow: 6px 6px 10px -3px black,
-                -6px -6px 10px -3px black;
-    padding: 35px;
-}
-
-.inner{
-    height: 15vh;
-    width: 15vh;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 4px 4px 6px -1px black,
-                 inset -4px -4px 6px -1px black;
-}*/
-
-/*#number{
-    font-weight: 600px;
-    font-size: 40px;
-    color: white;
-}*/
-
-/*.circle{
-    border-radius: 50%;
-    color: #00FFFF;
-}*/
-
-/* .percentage:before {
-    content: "Correct";
-    transform: translateY(10vh);
-}
-  
-.percentage:after {
-    content: "Wrong";
-    transform: translateY(10vh);
-}
-
-.percentage{
-    font-size: 9vh;
-}
-
-.percentage-results:before{
-    content: "30%";
-    margin-top: -1.5vh;
-    margin-right: 13vh;
-    transform: translateY(10vh);
-}
-
-.percentage-results:after{
-   content: "70%";
-   margin-top: -1.5vh;
-   transform: translateY(10vh);
-}
-
-.percentage-results{
-    font-size: 10vh;
-    font-weight: bold;
-}
-
-.question-results:before{
-    content: "3/10 questions";
-    margin-top: -1vh;
-    transform: translate(-7vh, 10.2vh);
-}
-
-.question-results:after{
-   content: "7/10 questions";
-   margin-top: -1vh;
-   transform: translate(1vh, 10vh);
-}
-
-.question-results{
-    font-size: 3vh;
-    padding-left: 5vh;
-} */
 
