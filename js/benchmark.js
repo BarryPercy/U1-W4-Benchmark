@@ -134,7 +134,7 @@ if(currentIndex===questions.length-1){
     endGame();
 }
     let questionNum = document.getElementById("footer")
-    questionNum.innerText = "QUESTION " + questionCount;
+    questionNum.innerText = "QUESTION " + questionCount +"/10";
     questionCount ++;
     
     let question = document.getElementById("question");

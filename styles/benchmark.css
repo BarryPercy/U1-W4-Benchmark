@@ -59,17 +59,19 @@ color:white;
 }
 .answer-btn{
     background-color: darkslateblue;
-    border-radius: 20px;
-    height:50px;
+    
+    border-radius: 40px;
+    height:60px;
     width:300px;
     display: inline-block;
     margin:10px;
     border:1px solid silver;
+    box-shadow:2px 1px 5px silver;
     outline: none;
     color:white;
 }
 .answer-btn:hover{
-    border-color: black;
+    border-color: white;
 }
 .selectedAnswer{
     background-color: #900080;
@@ -81,17 +83,18 @@ color:white;
 }
 #question{
     position:absolute;
-    left:150px;
+    left:80px;
     top:150px;
     color: white;
     font-size: 2rem;
+    text-align: center;
 }
 #footer{
     position: absolute;
-    bottom:150px;
+    bottom:120px;
     left:380px;
     color:white;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 .title-font{
     font-family: 'Outfit', sans-serif;
