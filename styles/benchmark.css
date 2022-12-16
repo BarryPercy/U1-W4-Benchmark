@@ -34,8 +34,8 @@ color:white;
 
 .controls{
     position: absolute;
-    top:465px;
-    left:380px;
+    bottom:150px;
+    right:0px;
 }
 .controls button{
     width:100px;
