@@ -285,8 +285,10 @@ document.getElementById("timer").innerHTML = `
       ></path>
     </g>
   </svg>
+  <span class="seconds">SECONDS</span>
   <span id="base-timer-label" class="base-timer__label timer-value">
   </span>
+  <span class="remaining">REMAINING</span>
 </div>
 `;
 const TIME_LIMIT = 20;
@@ -307,6 +309,7 @@ function startTimer() {
     timePassed = timePassed += 1;
     timeLeft = TIME_LIMIT - timePassed;
     document.getElementById("base-timer-label").innerHTML = timeLeft;
+    
     
     setCircleDasharray();
   }, 1000);
