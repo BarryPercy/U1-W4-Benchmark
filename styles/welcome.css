@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
+html{
+    height:100%;
+    max-height:90vh;
+}
+body{
+    background-color:darkgray;
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    
+}
+#container{
+    max-width:850px;
+    height:500px;
+    margin:auto;
+    margin-top: 10vh;
+    margin-bottom: 8vh;
+    margin-left:60px;
+    position: relative;
+    top:9vh;
+    left:10vh;
+}
+.epicode-logo{
+    max-width:20vh;
+    height:auto;
+    display: inline-block;
+    position: relative;
+    object-fit: contain;
+    top:8vh;
+    left:15vh;
+}
+
+.title-font{
+    font-family: 'Outfit', sans-serif;
+}
+.other-font{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+}
+#welcome-page-title{
+    color: white;
+    font-size: 4vh;
+    font-weight: lighter;
+    line-height: 6vh;
+    
+
+}
+#check{
+    width: 20px;
+    height:20px;
+}
+ul{
+    
+    padding-left: 20px;
+}
+#welcome-to{
+    font-weight: lighter;
+}
+
+#your-exam{
+    display: block;
+    font-weight: bolder;
+    
+}
+input[type="checkbox"]{
+    
+    accent-color:#D20094;
+}
+.pink{
+        color:#D20094;
+      
+    }
+.white{
+    color: white;
+}
+.welcome-page-list{
+    margin: 1vh;
+}
+
+.proceed-button{
+    position:relative;
+    float:right;
+   /* right: 0vh;*/
+    top:20px;
+    left:150px;
+    font-size: 1.6vh;
+    
+}
+h2{
+    font-size: 2em;
+}
+
+.proceed-button button{
+    font-family: 'Outfit', sans-serif;
+    width: 20vh;
+    height: 5vh;
+    
+    text-align: center;
+    border: none;
+    font-size: 1.2em;
+    background-color: #00ffff;
+    font-weight: bold;
+    color: #0d0a34;
+    -webkit-box-shadow: -3px 3px 61px 1px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 61px 1px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 61px 1px rgba(0,255,255,0.59);
+    
+    
+}
+
+.proceed-button button:hover{
+    -webkit-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+}
+
+.low-opacity{
+    opacity:20%;
+    box-shadow: 0px 0px 0px 0px;
+}
+
+#promise{
+    position: relative;
+    top:7vh;
+
+}

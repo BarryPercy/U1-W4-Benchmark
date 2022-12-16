@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
+body{
+    
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    padding:0;
+    margin:0;
+}
+.epicode-logo{
+    max-width:20vh;
+    height:auto;
+    display: inline-block;
+    position: relative;
+    object-fit: contain;
+    top:8vh;
+    left:15vh;
+}
+
+.container{
+    max-width:850px;
+    height:610px;
+    margin:auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+}
+#answer-btns{
+    position:absolute;
+    top:300px;
+    left:135px;
+    font-size:3rem;
+    color:white;
+}
+
+.controls{
+    position: absolute;
+    bottom:60px;
+    right:-100px;
+}
+.controls button{
+    display: inline-block;
+    width:10vh;
+    height:5vh;
+    padding: 5px;
+    text-align: center;
+    border: none;
+    border-radius: 1vh;
+    font-size: 2vh;
+    background-color: #00ffff;
+    font-weight: bold;
+    color: #0d0a34;
+    -webkit-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+}
+.controls button:hover{
+    -webkit-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+}
+.answer-btn{
+    background-color: darkslateblue;
+    
+    border-radius: 40px;
+    height:60px;
+    width:300px;
+    display: inline-block;
+    margin:10px;
+    border:1px solid silver;
+    box-shadow:2px 1px 5px silver;
+    outline: none;
+    color:white;
+}
+
+.answer-btn:hover{
+    border-color: white;
+}
+.selectedAnswer{
+    background-color: #900080;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap:10px;
+}
+#question{
+    display:flex;
+    width:800px;
+    position:absolute;
+    left:6vh;
+    top:16vh;
+    color: white;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+#footer{
+    position: absolute;
+    bottom:60px;
+    left:390px;
+    color:white;
+    font-size: 1.1rem;
+}
+.title-font{
+    font-family: 'Outfit', sans-serif;
+}
+.other-font{
+    font-family: 'Inter', sans-serif;
+    font-size: .9rem;
+}
+#count{
+    color:#900080;
+}

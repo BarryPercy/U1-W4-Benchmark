@@ -5,25 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
-    <link rel="stylesheet" href="result.css">
-</head>
+    <link rel="stylesheet" href="/styles/result.css">
+  </head>
 <body>
-   
-
+    <img class="epicode-logo" src="./assets/epicode_logo.png" alt="Logo">
     <container class="result-container"> 
-        <img class = "epicode-logo" src="./assets/epicode_logo.png" alt="Logo">
-
-        <h1 class = "result-title">Results</h1>
-        <p class = "summary">The summary of your answers:</p>
-
+        <h1 class="results-title">Results</h1>
+        <p class="summary">The summary of your answers:</p>
         <div class="correct-wrong">
-            <h2 id = "percentage-correct">Correct</h2>
-            <h2 id = "percentage-wrong">Wrong</h2>
+            <div class="opacity">
+            <div class="correct">
+                <h2 id = "correct-statement">Correct</h2>
+                <h2 id = "correct-percentage"></h2>
+                <p id = "correct-questions"></p>
+            </div>
+                    <div class="wrong">
+                <h2 id = "wrong-statement">Wrong</h2>
+                <h2 id = "wrong-percentage"></h2>
+                <p id = "wrong-questions"></p>
+                    </div>
+                </div>
+                <!-- <h2 class="percentage"></h2>
+                <h2 class="percentage-results"></h2> another way of doing it
+                <h2 class="question-results"></h2>
+             -->
+            <div class="pies">
+                <div class="pie pie1" style="--p:0;--b:5vh;--c:#900080"><div class="failedText"><span>Oh no..<br><span style="color: #02e3e3;"> Unfortunately, you didn't<br>pass this one.</span></span>
+                    </div>
+                </div>
+                <div class="pie pie2" style="--p:100;--b:5vh;--c:#00FFFF;"><div class="passedText"><span>Congratulations!<br><span style="color: #02e3e3;"> You passed the exam.</span></span><br><p>We'll send you the certificate<br>in few minutes.<br>Check your email (including<br>promotions / spam folder)</p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="circle"></div>-->
         </div>
-        
-        <button onclick="rateUs();">Rate Us</button>
-    </container>
-    <script src="script.js">
+        <button id="rateUs" onclick="window.location= 'feedback.html'" value="Rate us">RATE US</button>
+    <script src="./js/result.js">
     </script>
 </body>
 </html>
