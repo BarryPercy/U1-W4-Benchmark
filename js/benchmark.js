@@ -106,6 +106,7 @@ const questions = [
 
 
 //let totalScore=0;
+let TIME_LIMIT = 20;
 let currentIndex=-1;
 let optionIndex=-1;    
 let questionCount=1;
@@ -131,13 +132,10 @@ function processNextQuestion(){
   displayQuestionsAndAnswers();
   clearInterval(timerInterval);
   startTimer();
-  
 }
 
 
 function displayQuestionsAndAnswers(){
-
-    
     if(currentIndex===questions.length-1){ 
         endGame();
     }
@@ -147,6 +145,19 @@ function displayQuestionsAndAnswers(){
     let question = document.getElementById("question");
     currentIndex++;
     let currentQuestion = questions[currentIndex];
+    switch(currentQuestion.difficulty) {
+      case "easy":
+        TIME_LIMIT = 20;
+        break;
+      case "medium":
+        TIME_LIMIT = 30;
+        break;
+      case "hard":
+        TIME_LIMIT = 40;
+        break;
+      default:
+        break;
+    }
     question.innerHTML=currentQuestion.question;
     question.classList.add('title-font')
     let answer=document.getElementById('answer-btns');
@@ -241,6 +252,7 @@ function endGame(){
 
 function startGame(){
     displayQuestionsAndAnswers()
+    startTimer();
     //scoreIncrement()  
 }
 
@@ -274,7 +286,6 @@ document.getElementById("timer").innerHTML = `
   <span class="remaining">REMAINING</span>
 </div>
 `;
-const TIME_LIMIT = 20;
 document.querySelector('.timer-value').innerText = TIME_LIMIT;
 
 let timePassed = 0;
@@ -283,7 +294,7 @@ let nextQuestionClicked = false;
 let timerInterval = null;
 
 function startTimer() {
-  timeLeft = 30;
+  
   nextQuestionClicked=false;
   timerInterval = setInterval(() => {
     if(timeLeft===0||nextQuestionClicked===true){
@@ -312,5 +323,4 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 //document.getElementById("timer").innerHTML = `...`
-startTimer();
 
