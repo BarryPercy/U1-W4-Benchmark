@@ -4,6 +4,7 @@
 // 3.middle text has to change
 
 // giving result statement in the middle
+correctAns=sessionStorage.getItem("correctAns")
 let questions = 10
 let correctTotal= 0
 let wrongTotal = 0
@@ -76,8 +77,8 @@ window.onload = function(){
 } 
 
 function runTheFunctions(){
-    changeQuestions(6) 
-    result(6)
+    changeQuestions(correctAns) 
+    result(correctAns)
 }
 
 
