@@ -113,7 +113,16 @@ let selectedAnswer;
 let correct=0;
 let wrong=0;
 let questionIndex=0;
+let answerButts;
 
+function checkIfButtonClicked(){
+    answerButts = document.querySelectorAll('.answer-btn');
+    for(let i=0;i<answerButts.length;i++){
+        if(answerButts[i].classList.contains('selectedAnswer')){
+          processNextQuestion();
+        }  
+    }
+}
 
 function processNextQuestion(){
   timePassed = 0;
@@ -129,23 +138,19 @@ function processNextQuestion(){
 function displayQuestionsAndAnswers(){
 
     
-if(currentIndex===questions.length-1){
-    
-    endGame();
-}
+    if(currentIndex===questions.length-1){ 
+        endGame();
+    }
     let questionNum = document.getElementById("footer")
     questionNum.innerText = "QUESTION " + questionCount +"/10";
     questionCount ++;
-    
     let question = document.getElementById("question");
     currentIndex++;
     let currentQuestion = questions[currentIndex];
-    let correct_answer=currentQuestion.correct_answer;
     question.innerHTML=currentQuestion.question;
     question.classList.add('title-font')
     let answer=document.getElementById('answer-btns');
     optionIndex++;
-    let currentOptions=currentQuestion.options
     answer.innerHTML=""
     let optionCount=currentQuestion.options.length;
     for(i=0;i<optionCount;i++){
@@ -159,46 +164,25 @@ if(currentIndex===questions.length-1){
         currentQuestion.options.splice(randomOption,1)
     }
     changeBackgroundOfSelectedAnswer()
-
-    
-
-
-
 }
+
 function scoreIncrement(){
     //let giveOptions=document.getElementById('answer-btns').children
     //console.log(giveOptions)
     let currentQuestion = questions[questionIndex];
-   
     let correctAnswer=currentQuestion.correct_answer
     if(correctAnswer===selectedAnswer){
         correct++
-    }
-    else{
+    }else{
         wrong++
     }
-   
-questionIndex++;
-if(questionIndex===questions.length){
-    let correctAns=correct
-    console.log(correctAns)
-    sessionStorage.setItem("correctAns",correctAns)
-   
-    
+    questionIndex++;
+    if(questionIndex===questions.length){
+        let correctAns=correct
+        console.log(correctAns)
+        sessionStorage.setItem("correctAns",correctAns)
+    }
 }
-
-
-}
-
-
-
-  
-
-
-
-
-
-
 
 
 function changeBackgroundOfSelectedAnswer(){
@@ -247,12 +231,11 @@ function changeBackgroundOfSelectedAnswer(){
                 selectedAnswer=this.innerText;
                 
             });  
-      }
-    
+      }   
 }
                
 function endGame(){
-window.location.href="result.html"
+  window.location.href="result.html"
 }
 
 
