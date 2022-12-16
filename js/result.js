@@ -12,10 +12,7 @@ let wrongTotal = 0
 function result(x){
     let passedTest = document.querySelector(".passedText")
     let failedTest = document.querySelector(".failedText")
-
     Total= (x/questions) * 100
-    console.log(correctTotal);
-
     if( Total >= 60){
         passedTest.classList.add("changeForCorrect");
     }
