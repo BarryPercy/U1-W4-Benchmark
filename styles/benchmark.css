@@ -85,11 +85,15 @@ body{
     gap:10px;
 }
 #question{
+    display:flex;
+    width:800px;
     position:absolute;
-    left:80px;
-    top:120px;
+    left:6vh;
+    top:16vh;
     color: white;
     font-size: 2rem;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     
 }
