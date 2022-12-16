@@ -7,13 +7,15 @@ body{
     background-color:darkgray;
     background-image: url(../assets/bg.jpg);
     background-size: cover;
+    
 }
 #container{
     max-width:850px;
     height:700px;
     margin:auto;
-    margin-top: 8vh;
+    margin-top: 10vh;
     margin-bottom: 8vh;
+    margin-left:60px;
     position: relative;
     top:9vh;
     left:10vh;
@@ -33,7 +35,7 @@ body{
 }
 .other-font{
     font-family: 'Inter', sans-serif;
-    font-size: .9rem;
+    font-size: 1.2rem;
 }
 #welcome-page-title{
     color: white;
@@ -42,6 +44,19 @@ body{
     line-height: 6vh;
     
 
+}
+#check{
+    width: 20px;
+    height:20px;
+    accent-color: blue;
+    
+}
+ul{
+    
+    padding-left: 20px;
+}
+#welcome-to{
+    font-weight: lighter;
 }
 
 #your-exam{
@@ -64,15 +79,21 @@ body{
 .proceed-button{
     position:relative;
     float:right;
-    right:10vh;
-    font-size: 2vh;
+   /* right: 0vh;*/
+    top:50px;
+    left:190px;
+    font-size: 1.6vh;
+    
+}
+h2{
+    font-size: 2em;
 }
 
 .proceed-button button{
     font-family: 'Outfit', sans-serif;
-    width: 17vh;
-    height: 7vh;
-    border-radius:1vh;
+    width: 20vh;
+    height: 5vh;
+    
     text-align: center;
     border: none;
     font-size: 1.2em;
@@ -99,5 +120,6 @@ body{
 
 #promise{
     position: relative;
-    top:5vh;
+    top:7vh;
+
 }
