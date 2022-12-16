@@ -17,6 +17,7 @@ body{
     font-family: 'Inter', sans-serif;
     background-image: url('../assets/bg.jpg');
     background-size: cover;
+    overflow: hidden;
 }
 .benchmark-container{
     text-align: center;
