@@ -138,6 +138,7 @@ function processNextQuestion(){
 function displayQuestionsAndAnswers(){
     if(currentIndex===questions.length-1){ 
         endGame();
+        return;
     }
     let questionNum = document.getElementById("questionno")
     questionNum.innerText = "QUESTION " + questionCount 
