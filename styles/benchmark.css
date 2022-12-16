@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit:wght@400;700&display=swap');
+body{
+    
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+    font-family: 'Inter', sans-serif;
+    padding:0;
+    margin:0;
+}
+.epicode-logo{
+    max-width:20vh;
+    height:auto;
+    display: inline-block;
+    position: relative;
+    object-fit: contain;
+    top:8vh;
+    left:15vh;
+}
+.container{
+    max-width:90vh;
+    text-align: center;
+    height:900px;
+    margin:auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    position: relative;
+}
+#answer-btns{
+position:absolute;
+top:29vh;
+left:26vh;
+color:white;
+}
+
+.controls{
+    position: absolute;
+    top:45vh;
+    left:43.8vh;
+}
+.controls button{
+    width:10vh;
+    height:3vh;
+    padding: 1vh;
+    text-align: center;
+    border: none;
+    display: inline-block;
+    font-size: 1vh;
+    background-color: #00ffff;
+    font-weight: bold;
+    -webkit-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 61px 5px rgba(0,255,255,0.59);
+}
+.controls button:hover{
+    -webkit-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    -moz-box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+    box-shadow: -3px 3px 35px 9px rgba(0,255,255,0.59);
+
+}
+.answer-btn{
+    background-color: darkslateblue;
+    border-radius: 50px;
+    height:100px;
+    width:430px;
+    display: inline-block;
+    margin:20px;
+    border:1px solid silver;
+    outline: none;
+    color:white;
+}
+.answer-btn:hover{
+    border-color: black;
+}
+.selectedAnswer{
+    background-color: #900080;
+}
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    gap:10px;
+}
+#question{
+    position:absolute;
+    left:150px;
+    top:150px;
+    color: white;
+    font-size: 4vh;
+}
+#footer{
+    position: absolute;
+    bottom:-40vh;
+    left:44.4vh;
+    color:white;
+    font-size: 1.2vh;
+}
+.title-font{
+    font-family: 'Outfit', sans-serif;
+    left:9vh;
+    top:4vh;
+}
+.other-font{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2vh;
+}
