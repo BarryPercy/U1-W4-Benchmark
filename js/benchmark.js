@@ -151,7 +151,7 @@ if(currentIndex===questions.length-1){
     for(i=0;i<optionCount;i++){
         let randomOption=Math.floor(Math.random()*currentQuestion.options.length);
         let option=document.createElement('button')
-
+        
         option.classList.add('answer-btn')
         option.classList.add('other-font')
         option.innerText=currentQuestion.options[randomOption]
