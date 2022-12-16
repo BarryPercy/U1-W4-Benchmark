@@ -71,6 +71,11 @@ h2:after {
     opacity: 90%;
 }
 
+#rateUs:hover{
+    border-color: rgb(167, 150, 150);
+    color: rgb(175, 178, 183);
+}
+
 .correct{
     transform: translate(46vh,17.5vh);
     text-align: left;
