@@ -69,10 +69,16 @@ h2:after {
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
     opacity: 90%;
+    left: 0.3vh;
+}
+
+#rateUs:hover{
+    border-color: rgb(167, 150, 150);
+    color: rgb(175, 178, 183);
 }
 
 .correct{
-    transform: translate(46vh,17.5vh);
+    transform: translate(46vh,15.8vh);
     text-align: left;
 }
 
@@ -129,7 +135,7 @@ h2{
 }
 
 .pie2{
-    right:19vh;
+    right:19.35vh;
     bottom:25vh;
 }
 
